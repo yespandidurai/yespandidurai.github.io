@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' https: data:;">
+
+    <!-- SEO Meta Tags -->
+    <title>Dr. Pandidurai Solai | Synthetic Organic Chemist & Asymmetric Catalysis</title>
+    <meta name="description" content="Official portfolio of Dr. Pandidurai Solai, Postdoctoral Research Fellow at iSm2, Aix-Marseille University. Discover research in asymmetric catalysis, atroposelective synthesis, and the stereoselective construction of complex heterocycles.">
+    <meta name="keywords" content="Pandidurai Solai, Dr Pandidurai Solai, Pandidurai Solai asymmetric catalysis, organocatalysis researcher, asymmetric catalysis synthetic organic chemistry, domino reactions, cyclopropane chemistry, atropisomers, Aix-Marseille University, IIT Madras">
+    <meta name="author" content="Dr. Pandidurai Solai">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pandiduraisolai.github.io/" />
+    
+    <!-- Open Graph Metadata (LinkedIn, Facebook, etc.) -->
+    <meta property="og:title" content="Dr. Pandidurai Solai | Synthetic Organic Chemist">
+    <meta property="og:description" content="Designing catalytic strategies for the stereoselective construction of complex heterocycles and atropisomers.">
+    <meta property="og:image" content="https://pandiduraisolai.github.io/Assets/images/pandi.jpeg">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://pandiduraisolai.github.io/">
+    
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. Pandidurai Solai | Synthetic Organic Chemist">
+    <meta name="twitter:description" content="Designing catalytic strategies for stereoselective construction of complex heterocycles.">
+    <meta name="twitter:image" content="https://pandiduraisolai.github.io/Assets/images/pandi.jpeg">
+
+    <!-- Schema.org JSON-LD for Person (Knowledge Graph Enrichment) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dr. Pandidurai Solai",
+      "jobTitle": "Postdoctoral Research Fellow",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "iSm2 Institute of Molecular Sciences of Marseille, Aix-Marseille University"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Indian Institute of Technology Madras"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Bharathidasan University"
+        }
+      ],
+      "url": "https://pandiduraisolai.github.io/",
+      "sameAs": [
+        "https://www.linkedin.com/in/dr-pandidurai-s-8716551aa/",
+        "https://scholar.google.com/citations?user=fAdfZRQAAAAJ&hl=en",
+        "https://orcid.org/0000-0002-0167-1717",
+        "https://x.com/Yespandidurai"
+      ],
+      "knowsAbout": [
+        "Asymmetric catalysis",
+        "Organocatalysis",
+        "Domino reactions",
+        "Atroposelective synthesis",
+        "Cyclopropane chemistry",
+        "Photochemistry",
+        "Electrochemistry",
+        "Transition metal catalysis"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD for ScholarlyArticle -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "headline": "Organocatalyzed Enantio- and Diastereoselective Formal Domino 1,3-Dipolar Cycloaddition/Rearrangement: Synthesis of Chiral Pyrrolo-thiazine-2-carbaldehydes",
+            "author": [
+              {"@type": "Person", "name": "Pandidurai, S."},
+              {"@type": "Person", "name": "Choutipalli, V. S. K."},
+              {"@type": "Person", "name": "Subramanian, V."},
+              {"@type": "Person", "name": "Sekar, G."}
+            ],
+            "datePublished": "2024",
+            "publisher": "Organic Letters"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        :root {
+            /* Color Palette */
+            --bg-deep-navy: #0B1120;
+            --bg-surface: #111827;
+            --bg-surface-light: #1F2937;
+            --text-primary: #F3F4F6;
+            --text-secondary: #9CA3AF;
+            --accent-copper: #B87333;
+            --accent-copper-light: #d48b48;
+            --accent-blue: #3B82F6;
+            --accent-blue-hover: #60A5FA;
+            
+            /* Typography */
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            
+            /* Spacing & Layout */
+            --section-padding: 5rem 10%;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-deep-navy);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-copper);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-blue-hover);
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 17, 32, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 10%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-copper);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links > li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-copper);
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(11, 17, 32, 0.95);
+            backdrop-filter: blur(10px);
+            min-width: 180px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-top: 2px solid var(--accent-copper);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            list-style: none;
+            padding: 0.5rem 0;
+            z-index: 1000;
+        }
+
+        .nav-links li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown li {
+            padding: 0;
+        }
+
+        .dropdown a {
+            padding: 0.8rem 1.5rem;
+            text-transform: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .dropdown a:hover {
+            background: rgba(255,255,255,0.05);
+            color: var(--accent-copper);
+            padding-left: 2rem; /* Slide effect on hover */
+        }
+
+        /* Chevron Icon for Dropdown */
+        .chevron-down {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links li:hover .chevron-down {
+            transform: rotate(180deg);
+        }
+
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 10% 8rem; /* Reduced top padding to accommodate the molecule row */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 20% 80%, rgba(184, 115, 51, 0.05) 0%, transparent 40%);
+            overflow: hidden;
+        }
+
+        /* Top Banner for Molecules */
+        .hero-molecules-banner {
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* Spreads them evenly across the whole width */
+            align-items: center;
+            margin-top: -1.5em; /* Move molecules closer to the header */
+            margin-bottom: 4rem; /* Space between molecules and main content */
+            padding: 0 2rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .hero-molecules-banner img {
+            height: 180px; /* Increased to maximum size for a single row */
+            width: auto;
+            max-width: 16%; /* Allows them to expand but prevents breaking the single row */
+            object-fit: contain;
+            filter: invert(1) brightness(1.2);
+            mix-blend-mode: screen;
+            opacity: 0.85;
+            animation: floatProfile 6s ease-in-out infinite;
+            cursor: zoom-in; /* Indicate interactivity */
+            transition: var(--transition);
+        }
+        
+        .hero-molecules-banner img:hover {
+            opacity: 1;
+            transform: scale(1.05); /* Slight pop when hovering */
+        }
+
+        /* Staggered floating animations */
+        .hero-molecules-banner img:nth-child(1) { animation-delay: 0s; }
+        .hero-molecules-banner img:nth-child(2) { animation-delay: -1.2s; }
+        .hero-molecules-banner img:nth-child(3) { animation-delay: -2.4s; }
+        .hero-molecules-banner img:nth-child(4) { animation-delay: -3.6s; }
+        .hero-molecules-banner img:nth-child(5) { animation-delay: -4.8s; }
+        .hero-molecules-banner img:nth-child(6) { animation-delay: -6.0s; }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            width: 100%;
+            z-index: 1; 
+            position: relative;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 700px;
+        }
+
+        .hero-image {
+            flex: 0 0 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: floatProfile 6s ease-in-out infinite;
+        }
+
+        @keyframes floatProfile {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hexagon-border {
+            width: 320px;
+            height: 350px; /* Slightly taller for a perfect vertical hexagon */
+            background: linear-gradient(135deg, var(--accent-copper), var(--accent-blue));
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px; /* This creates the border thickness */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-color: var(--bg-surface-light);
+            cursor: zoom-in;
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Hero Social Icons */
+        .hero-socials {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 2rem;
+            justify-content: center;
+            pointer-events: auto; /* Ensure clickable */
+        }
+
+        .hero-socials svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .hero-socials a:hover svg {
+            fill: var(--accent-copper);
+            transform: translateY(-3px);
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--accent-copper);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            font-family: var(--font-serif);
+            font-style: italic;
+        }
+
+        .affiliation {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .hero-achievements {
+            margin-bottom: 3rem;
+            font-size: 0.95rem;
+            color: var(--accent-copper-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border: 1px solid var(--accent-copper);
+            color: var(--accent-copper);
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+            pointer-events: auto;
+        }
+
+        .btn:hover {
+            background: var(--accent-copper);
+            color: var(--bg-deep-navy);
+        }
+
+        /* Layout Grids */
+        section {
+            padding: var(--section-padding);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-surface);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+            text-align: justify;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(184, 115, 51, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            color: var(--accent-blue);
+        }
+
+        /* --- INTERACTIVE RESEARCH THEMES DIAGRAM --- */
+        .theme-diagram-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 700px;
+            margin: 0 auto;
+        }
+        
+        .diagram-lines {
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .diagram-center {
+            position: absolute;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px; 
+            height: 280px;
+            background: var(--bg-deep-navy);
+            border: 2px solid var(--accent-copper);
+            border-radius: 50%;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            z-index: 2;
+            box-shadow: 0 0 40px rgba(184, 115, 51, 0.15);
+            transition: all 0.4s ease;
+        }
+
+        .diagram-center svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--accent-copper);
+            margin-bottom: 15px;
+            transition: all 0.4s ease;
+        }
+
+        .diagram-center h3 {
+            font-size: 1.3rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .diagram-center p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .diagram-node {
+            position: absolute;
+            width: 140px; 
+            height: 140px;
+            background: var(--bg-surface);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            z-index: 3;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            /* Base transform setup */
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .diagram-node:hover, .diagram-node.active {
+            border-color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.08);
+            transform: translate(-50%, -50%) scale(1.15);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+            z-index: 10;
+        }
+        
+        .diagram-node svg { 
+            width: 30px; 
+            height: 30px; 
+            stroke: var(--accent-copper); 
+            margin-bottom: 8px; 
+            transition: stroke 0.3s; 
+        }
+        
+        .diagram-node:hover svg, .diagram-node.active svg { 
+            stroke: var(--accent-blue); 
+        }
+        
+        .diagram-node span { 
+            font-size: 0.8rem; 
+            font-weight: 600; 
+            line-height: 1.3; 
+            color: var(--text-primary);
+        }
+        
+        .node-mobile-desc { display: none; }
+
+        /* Orbital Math (Radius ~38% of container) */
+        .node-1 { top: 50%; left: 90%; }
+        .node-2 { top: 78.28%; left: 78.28%; }
+        .node-3 { top: 90%; left: 50%; }
+        .node-4 { top: 78.28%; left: 21.72%; }
+        .node-5 { top: 50%; left: 10%; }
+        .node-6 { top: 21.72%; left: 21.72%; }
+        .node-7 { top: 10%; left: 50%; }
+        .node-8 { top: 21.72%; left: 78.28%; }
+
+        /* Research Summaries */
+        .summary-section {
+            background: var(--bg-surface);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .summary-section h3 {
+            color: var(--accent-copper);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .summary-block {
+            margin-bottom: 3rem;
+        }
+
+        .summary-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .summary-text {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .summary-image-placeholder {
+            width: fit-content;
+            max-width: 100%;
+            height: auto;
+            margin: 1rem auto 0; /* Centers the box nicely */
+            background: rgba(255,255,255,0.02);
+            border: 1px dashed rgba(184, 115, 51, 0.4);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-family: var(--font-serif);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            cursor: zoom-in;
+        }
+        
+        /* Adds space only when there is placeholder text */
+        .summary-image-placeholder span {
+            padding: 3rem 2rem; 
+        }
+
+        .summary-image-placeholder:hover {
+            border-color: var(--accent-copper);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .summary-image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            background-color: #ffffff; /* White bg for ChemDraws */
+            padding: 15px; /* Creates a nice white frame inside the border */
+        }
+
+        /* Figure Caption Styles */
+        .figure-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 0.8rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .figure-caption a {
+            color: var(--accent-copper);
+            text-decoration: none;
+            transition: var(--transition);
+            border-bottom: 1px dotted rgba(184, 115, 51, 0.4);
+            padding-bottom: 2px;
+        }
+
+        .figure-caption a:hover {
+            color: var(--accent-copper-light);
+            border-bottom-color: var(--accent-copper-light);
+        }
+
+        /* Publications & Patents */
+        .publication {
+            padding: 2.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            gap: 2.5rem;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .pub-cover {
+            flex: 0 0 140px;
+            max-width: 100%;
+        }
+
+        .cover-placeholder {
+            width: 100%;
+            height: 180px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(184, 115, 51, 0.3);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            cursor: zoom-in;
+        }
+
+        .cover-placeholder:hover {
+            border-color: var(--accent-copper);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .cover-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Prevents cropping */
+            display: block;
+            background-color: #ffffff; /* Added white background for transparent covers */
+            padding: 5px; /* Added slight padding for a neat frame */
+        }
+
+        .pub-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .toc-placeholder {
+            width: fit-content;
+            max-width: 100%;
+            height: auto;
+            margin-top: 1.5rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px dashed rgba(184, 115, 51, 0.4);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            z-index: 1;
+            cursor: zoom-in;
+        }
+        
+        .toc-placeholder span {
+            padding: 2rem 3rem;
+        }
+
+        .toc-placeholder:hover {
+            border-color: var(--accent-copper);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .toc-placeholder img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            background-color: #ffffff; /* White bg for ChemDraws */
+            padding: 10px;
+        }
+
+        /* Modal / Lightbox for Images */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: var(--border-radius);
+            background-color: #ffffff; /* White bg for clear ChemDraws */
+            padding: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            animation: zoomModal 0.3s ease-out;
+            /* Re-invert modal content if it is a hero molecule so it shows normally */
+            transition: filter 0.2s;
+        }
+        
+        .modal-content.inverted {
+            filter: invert(0); /* Remove the inversion inside modal to see true colors */
+        }
+
+        @keyframes zoomModal {
+            from {transform: scale(0.9); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: var(--text-secondary);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--accent-copper);
+        }
+
+        .pub-title {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-authors {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .pub-authors strong {
+            color: var(--text-primary);
+        }
+
+        .pub-journal {
+            font-style: italic;
+            color: var(--accent-copper);
+        }
+
+        .pub-links {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Journal Action Buttons */
+        .pub-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap; /* Ensures buttons wrap nicely on mobile screens */
+        }
+
+        .btn-journal {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            background-color: var(--bg-surface-light);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-journal:hover {
+            background-color: var(--accent-copper);
+            color: var(--bg-deep-navy);
+            border-color: var(--accent-copper);
+        }
+
+        /* Timeline */
+        .timeline {
+            border-left: 2px solid var(--accent-blue);
+            padding-left: 2rem;
+            margin-left: 1rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 0.4rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-copper);
+            border: 3px solid var(--bg-deep-navy);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .group-link {
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 0.3rem;
+            font-weight: 600;
+            color: var(--accent-copper);
+        }
+
+        .group-link:hover {
+            color: var(--accent-copper-light);
+        }
+
+        /* Conference Photo Grid */
+        .conference-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+        
+        .conference-photos {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .conf-photo-container {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(184, 115, 51, 0.3);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            cursor: zoom-in;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .conf-photo-container:hover {
+            border-color: var(--accent-copper);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .conf-photo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .conf-photo-caption {
+            padding: 0.8rem;
+            background: var(--bg-surface);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background: #060A14;
+            padding: 3rem 10% 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .footer-central {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .footer-design {
+            text-align: center;
+            font-size: 0.75rem;
+            margin-top: 0.2rem;
+            width: 100%;
+            opacity: 0.7;
+            max-width: 1400px;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .footer-design a:hover {
+            color: var(--accent-copper) !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-molecules-banner {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+            .hero-molecules-banner img {
+                max-width: 30%; /* Allows wrapping on tablets */
+                height: 120px;
+            }
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 3rem;
+            }
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .affiliation, .hero-achievements {
+                justify-content: center;
+            }
+            .hexagon-border {
+                width: 250px;
+                height: 275px;
+            }
+            /* Adjust dropdown for mobile if needed, though simple enough to work */
+            .nav-links {
+                display: none; /* Can be updated to hamburger menu if needed later */
+            }
+            .conference-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            /* Diagram Responsive Fallback */
+            .theme-diagram-wrapper {
+                height: auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+            .diagram-lines, .diagram-center { display: none; }
+            .diagram-node {
+                position: relative;
+                top: auto !important; left: auto !important;
+                transform: none !important;
+                width: 100%; height: auto;
+                border-radius: var(--border-radius);
+                padding: 1.5rem;
+                aspect-ratio: auto;
+            }
+            .diagram-node.active { transform: translateY(-5px) !important; }
+            .diagram-node span { font-size: 1rem; }
+            .node-mobile-desc {
+                display: block;
+                margin-top: 0.8rem;
+                font-size: 0.85rem;
+                color: var(--text-secondary);
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .publication { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+            .pub-cover { width: 120px; }
+            .toc-placeholder { width: 100%; }
+            .footer-design { justify-content: center; }
+            .hero-molecules-banner img { max-width: 45%; height: 90px; } /* Scales down nicely on mobile phones */
+            .theme-diagram-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#journey">Education</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li>
+                    <a href="#themes">
+                        Research
+                        <svg class="chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="#themes">Themes</a></li>
+                        <li><a href="#summaries">Summaries</a></li>
+                    </ul>
+                </li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#patents">Patents</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#conferences">Conferences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <!-- Top Banner: 6 Custom Floating Molecules -->
+            <div class="hero-molecules-banner">
+                <img src="Assets/images/mol11.svg" alt="Synthesized Molecule 1">
+                <img src="Assets/images/mol12.svg" alt="Synthesized Molecule 2">
+                <img src="Assets/images/mol13.svg" alt="Synthesized Molecule 3">
+                <img src="Assets/images/mol14.svg" alt="Synthesized Molecule 4">
+                <img src="Assets/images/mol15.svg" alt="Synthesized Molecule 5">
+                <img src="Assets/images/mol16.svg" alt="Synthesized Molecule 6">
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+
+                    <h1>Dr. Pandidurai Solai</h1>
+                    <p class="tagline">Designing catalytic strategies for the stereoselective construction of complex heterocycles and atropisomers.</p>
+                    
+                    <div class="affiliation">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Postdoctoral Research Fellow | iSm2, Aix-Marseille University, France
+                    </div>
+                    <div class="hero-achievements">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        Seal of Excellence, MSCA Postdoctoral Fellowship 2025
+                    </div>
+
+                    <p style="max-width: 600px; margin-bottom: 2rem;">
+                        My research focuses on developing innovative catalytic methodologies, leveraging asymmetric organocatalysis, small-ring transformations, and transition-metal catalysis to solve pressing challenges in synthetic organic chemistry.
+                    </p>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="hexagon-border">
+                        <div class="image-placeholder">
+                            <img src="Assets/images/pandi.jpeg" alt="Dr. Pandidurai Solai">
+                        </div>
+                    </div>
+                    <!-- Social/Academic Icons moved to Hero -->
+                    <div class="hero-socials">
+                        <!-- Email -->
+                        <a href="mailto:yespandiduraiiitm[at]gmail[dot]com" aria-label="Email">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
+                        <!-- Twitter / X -->
+                        <a href="https://x.com/Yespandidurai" aria-label="Twitter" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/dr-pandidurai-s-8716551aa/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <!-- Google Scholar -->
+                        <a href="https://scholar.google.com/citations?user=fAdfZRQAAAAJ&hl=en&oi=sra" aria-label="Google Scholar" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z"/></svg>
+                        </a>
+                        <!-- ORCID -->
+                        <a href="https://orcid.org/0000-0002-0167-1717" aria-label="ORCID" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.369 5.016h-3.875V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.094-3.722h-2.225z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" style="background-color: var(--bg-surface-light);">
+            <h2>About Me</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <p>Born in 1995 in Salakuppam, a village in the Tiruvannamalai district of Tamil Nadu, India, I completed my secondary education at the Tamil Nadu State Government Higher Secondary School in Mekkalur.</p>
+                    <p>I hold a Bachelor of Science in Chemistry from Presidency College (Autonomous), Chennai (2015), and a Master of Science in Chemistry from Bharathidasan University, Tiruchirappalli (2017). I subsequently earned my Ph.D. in Organic Chemistry from the Indian Institute of Technology Madras (IIT Madras), Chennai, in 2024, under the supervision of Professor G. Sekar.</p>
+                    <p>I am currently a Postdoctoral Researcher at Aix-Marseille University, France, working under the mentorship of Professor Damien Bonne.</p>
+                </div>
+                <div class="card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;">
+                    <div class="cover-placeholder" style="width: 100%; max-width: 250px; height: 320px;">
+                        <img src="Assets/images/thesiscover.png" alt="Ph.D. Thesis Cover">
+                    </div>
+                    <div class="pub-actions" style="margin-top: 0; justify-content: center;">
+                        <a href="Assets/images/thesiscover.svg" target="_blank" rel="noopener" class="btn-journal">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                            Graphical Abstract
+                        </a>
+                        <a href="https://shodhganga.inflibnet.ac.in/handle/10603/612413" target="_blank" rel="noopener" class="btn-journal">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            Full Text
+                        </a>
+                        <a href="Assets/pdfs/Phd_Thesis_Pandidurai.pdf" target="_blank" rel="noopener" class="btn-journal">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACADEMIC JOURNEY -->
+        <section id="journey">
+            <h2>Academic Journey</h2>
+            <div class="timeline" style="margin-top: 2rem;">
+                <div class="timeline-item">
+                    <div class="timeline-date">March 2025 - Present</div>
+                    <h3>Postdoctoral Research Fellow</h3>
+                    <p><strong>iSm2 Institute of Molecular Sciences of Marseille, Aix-Marseille University, France</strong></p>
+                    <p>Host: Prof. Damien Bonne. Project: Synthesis of heteroatom-linked non-biaryl atropisomeres.</p>
+                    <!-- Replace "#" with the actual Postdoc research group URL -->
+                    <a href="https://ism2.univ-amu.fr/en/teams/stereo/presentation" target="_blank" rel="noopener" class="group-link">Research Group Page &rarr;</a>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2024 - Dec 2024</div>
+                    <h3>Project Associate (Industry Project)</h3>
+                    <p><strong>Indian Institute of Technology Madras (IIT Madras), India</strong></p>
+                    <p>Supervisor: Prof. G. Sekar. Project: Conversion of toluene to benzoic acid using reusable metal nanoparticles.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">July 2018 - July 2024</div>
+                    <h3>Ph.D. in Synthetic Organic Chemistry</h3>
+                    <p><strong>Indian Institute of Technology Madras (IIT Madras), India</strong></p>
+                    <p>Supervisor: Prof. G. Sekar.<br>
+                    Thesis: Organocatalyzed Enantioselective Domino and One-Pot Synthesis of Heterocyclic Compounds Using Formal 1,3-Dipolar Cycloaddition.</p>
+                    <!-- Replace "#" with the actual PhD research group URL -->
+                    <a href="https://sekargroup.com/" target="_blank" rel="noopener" class="group-link">Research Group Page &rarr;</a>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">July 2015 - April 2017</div>
+                    <h3>M.Sc. in Chemistry</h3>
+                    <p><strong>Bharathidasan University, Tiruchirappalli, India</strong></p>
+                    <p>Supervisor: Prof.  K. Srinivasan<br>
+                    Thesis: Diastereoselective Synthesis of Alkyne Moiety Appended Donor - Acceptor Cyclopropanes by Michael Initiated Ring Closure.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2012 - April 2015</div>
+                    <h3>B.Sc. in Chemistry</h3>
+                    <p><strong>Presidency College (Autonomous), Chennai, India</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCIENTIFIC VISION -->
+        <section id="vision">
+            <h2>Scientific Philosophy & Vision</h2>
+            <div class="grid-2">
+                <div>
+                    <p>The synthesis of complex molecular architectures requires not just chemical intuition, but the design of elegant, highly efficient catalytic systems. My research is driven by the philosophy that <strong>synthetic efficiency and structural complexity can be achieved simultaneously</strong> through the strategic application of novel catalysis.</p>
+                    <p>By exploring the intersection of organocatalysis, asymmetric induction, and domino reactions, we aim to develop robust methodologies that provide access to biologically relevant heterocycles and axially chiral frameworks with exceptional stereocontrol. Our work ultimately seeks to expand the synthetic toolkit available for drug discovery and materials science.</p>
+                </div>
+                <div class="card">
+                    <h3>Core Objectives</h3>
+                    <ul style="padding-left: 1.5rem; color: var(--text-secondary); margin-top: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Stereoselective construction of non-biaryl atropisomers.</li>
+                        <li style="margin-bottom: 0.5rem;">Development of green, transition metal-free organocatalytic domino methods.</li>
+                        <li style="margin-bottom: 0.5rem;">Enantioselective synthesis of N- and S-containing heterocycles (pyrrolo-thiazines).</li>
+                        <li>Exploiting small-ring strain (cyclopropanes) for challenging cycloadditions.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESEARCH THEMES (INTERACTIVE DIAGRAM) -->
+        <section id="themes" style="background-color: var(--bg-surface-light);">
+            <h2>Research Themes</h2>
+            <div class="theme-diagram-wrapper">
+                <!-- SVG Connecting Lines -->
+                <svg class="diagram-lines">
+                    <line x1="50%" y1="50%" x2="90%" y2="50%" stroke="rgba(184,115,51,0.4)" stroke-width="2" stroke-dasharray="4,4" />
+                    <line x1="50%" y1="50%" x2="78.28%" y2="78.28%" stroke="rgba(184,115,51,0.4)" stroke-width="2" stroke-dasharray="4,4" />
+                    <line x1="50%" y1="50%" x2="50%" y2="90%" stroke="rgba(184,115,51,0.4)" stroke-width="2" stroke-dasharray="4,4" />
+                    <line x1="50%" y1="50%" x2="21.72%" y2="78.28%" stroke="rgba(184,115,51,0.4)" stroke-width="2" stroke-dasharray="4,4" />
+                    <line x1="50%" y1="50%" x2="10%" y2="50%" stroke="rgba(184,115,51,0.4)" stroke-width="2" stroke-dasharray="4,4" />
+                    <line x1="50%" y1="50%" x2="21.72%" y2="21.72%" stroke="rgba(184,115,51,0.4)" stroke-width="2" stroke-dasharray="4,4" />
+                    <line x1="50%" y1="50%" x2="50%" y2="10%" stroke="rgba(184,115,51,0.4)" stroke-width="2" stroke-dasharray="4,4" />
+                    <line x1="50%" y1="50%" x2="78.28%" y2="21.72%" stroke="rgba(184,115,51,0.4)" stroke-width="2" stroke-dasharray="4,4" />
+                </svg>
+
+                <!-- Central Information Hub -->
+                <div class="diagram-center" id="diagram-center">
+                    <div id="center-icon-svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H15M10 9L6 20C5.6 20.8 6.2 22 7.1 22H16.9C17.8 22 18.4 20.8 18 20L14 9M10 9V3M14 9V3M6 16H18"/></svg>
+                    </div>
+                    <h3 id="center-title">Core Expertise</h3>
+                    <p id="center-desc">Hover over any node in the network to view a detailed breakdown of the research theme.</p>
+                </div>
+
+                <!-- 8 Orbiting Nodes -->
+                <div class="diagram-node node-1" data-title="Atroposelective Synthesis" data-desc="Addressing the challenges of axially chiral molecules by developing catalytic asymmetric methodologies to selectively synthesize stable non-biaryl atropisomers.">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>Atroposelective Synthesis</span>
+                    <div class="node-mobile-desc">Addressing the challenges of axially chiral molecules by developing catalytic asymmetric methodologies to selectively synthesize stable non-biaryl atropisomers.</div>
+                </div>
+
+                <div class="diagram-node node-2" data-title="Organocatalysis" data-desc="Developing novel chiral catalysts to enable highly enantioselective transformations. Focusing on non-covalent interactions to construct complex stereocenters.">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    <span>Asymmetric Organocatalysis</span>
+                    <div class="node-mobile-desc">Developing novel chiral catalysts to enable highly enantioselective transformations. Focusing on non-covalent interactions to construct complex stereocenters.</div>
+                </div>
+
+                <div class="diagram-node node-3" data-title="Domino Reactions" data-desc="Designing one-pot multicomponent cascade sequences to rapidly build structural complexity, minimizing waste and step-count.">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    <span>Domino & Cascade</span>
+                    <div class="node-mobile-desc">Designing one-pot multicomponent cascade sequences to rapidly build structural complexity, minimizing waste and step-count.</div>
+                </div>
+
+                <div class="diagram-node node-4" data-title="Metal Catalysis" data-desc="Expertise in transition metal and nanoparticle-mediated reactions, including Heck-like carbocyclizations using reusable binaphthyl-stabilized Pd nanoparticles.">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    <span>Homogeneous & Heterogeneous</span>
+                    <div class="node-mobile-desc">Expertise in transition metal and nanoparticle-mediated reactions, including Heck-like carbocyclizations using reusable binaphthyl-stabilized Pd nanoparticles.</div>
+                </div>
+
+                <div class="diagram-node node-5" data-title="Small-Ring Transform" data-desc="Exploiting the inherent ring-strain of cyclopropanes and related small cycles to drive thermodynamically challenging ring-opening and ring-expansion transformations.">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18L12 4z"/></svg>
+                    <span>Small-Ring Transforms</span>
+                    <div class="node-mobile-desc">Exploiting the inherent ring-strain of cyclopropanes and related small cycles to drive thermodynamically challenging ring-opening and ring-expansion transformations.</div>
+                </div>
+
+                <div class="diagram-node node-6" data-title="Photo/Electrochemistry" data-desc="Utilizing visible light and electrical current to generate reactive radical intermediates under mild conditions, enabling unique bond formations.">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <span>Photochemistry & Electrochemistry</span>
+                    <div class="node-mobile-desc">Utilizing visible light and electrical current to generate reactive radical intermediates under mild conditions, enabling unique bond formations.</div>
+                </div>
+
+                <div class="diagram-node node-7" data-title="Drug Design" data-desc="Applying innovative synthetic methodologies to the design, synthesis, and development of novel biologically active molecules and therapeutic agents.">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20.5l10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="M8.5 8.5l7 7"/></svg>
+                    <span>Drug Design</span>
+                    <div class="node-mobile-desc">Applying innovative synthetic methodologies to the design, synthesis, and development of novel biologically active molecules and therapeutic agents.</div>
+                </div>
+
+                <div class="diagram-node node-8" data-title="Biocatalysis" data-desc="Development of organic methodology using biocatalysts to enable highly selective, green, and sustainable synthetic transformations.">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                    <span>Biocatalytic Methods</span>
+                    <div class="node-mobile-desc">Development of organic methodology using biocatalysts to enable highly selective, green, and sustainable synthetic transformations.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESEARCH SUMMARIES -->
+        <section id="summaries">
+            <h2>Research Summaries</h2>
+            <p style="max-width: 800px; margin-bottom: 3rem;">Detailed overview of methodological breakthroughs during my Postdoctoral and Doctoral research.</p>
+
+            <!-- Postdoctoral Research -->
+            <div class="summary-section">
+                <h3>Postdoctoral Research Summary</h3>
+                <div class="summary-block">
+                    <p class="summary-text">
+                        Currently working at iSm2 (Institute of Molecular Sciences of Marseille, Aix-Marseille University, France) on the synthesis of heteroatom-linked non-biaryl tetrahydroquinazoline atropisomers starting from isophthalaldehyde via enantioselective desymmetrization strategy using chiral phosphoric acid catalyst.
+                    </p>
+                    <div class="summary-image-placeholder">
+                       <img src="Assets/images/ejc2026.svg" alt="Postdoctoral Research Scheme">
+                    </div>
+                    <div class="figure-caption">
+                        <a href="#publications">ChemistryEurope, 2025, Accepted.</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctoral Research -->
+            <div class="summary-section">
+                <h3>Doctoral Research Summary</h3>
+                <p class="summary-text" style="font-style: italic; color: var(--text-secondary); margin-bottom: 2.5rem;">
+                    During my Ph.D., my research mainly focused on "Chiral amine organocatalyzed asymmetric 1,3-dipolar cycloaddition for the construction of novel heterocyclic frameworks bearing multiple stereogenic centers".
+                </p>
+
+                <!-- Doc Project 1 -->
+                <div class="summary-block">
+                    <p class="summary-text">
+                        I successfully developed a methodology for the synthesis of enantioenriched pyrrolo-thiazines-2-carbaldehydes and derivatives, starting from commercially available α,β-unsaturated aldehydes, and easily accessible benzothiazolium salts. The reaction, catalyzed by chiral amino organocatalysts, proceeded via 1,3-dipolar cycloaddition/rearrangement, delivering products in good yields with excellent stereocontrol (up to >99% ee, and >20:1 d.r.).
+                    </p>
+                    <div class="summary-image-placeholder">
+                        <img src="Assets/images/ol2024.svg" alt="Org. Lett. Reaction Scheme">
+                    </div>
+                    <div class="figure-caption">
+                        <a href="https://doi.org/10.1021/acs.orglett.4c00713" target="_blank" rel="noopener">Org. Lett. 2024, 26, 2971-2975</a>
+                    </div>
+                </div>
+
+                <!-- Doc Project 2 -->
+                <div class="summary-block">
+                    <p class="summary-text">
+                        This methodology was further extended to develop an efficient enantioselective one-pot method for the synthesis of N-phenyl thioether-tethered tetrasubstituted 4,5-dihydropyrrole-3-carbaldehydes. The sequence combined 1,3-dipolar cycloaddition/rearrangement/C-S bond formation/ring-opening (C-S bond cleavage), starting from benzothiazolium salts and α,β-unsaturated aldehydes. Using (R)-diphenylprolinol trimethyl silyl ether as the catalyst, the reaction proceeded in good yields with excellent stereocontrol (>96% ee and up to >20:1 d.r.).
+                    </p>
+                    <div class="summary-image-placeholder">
+                        <img src="Assets/images/obc2024.svg" alt="Org. Biomol. Chem. Reaction Scheme">
+                    </div>
+                    <div class="figure-caption">
+                        <a href="https://doi.org/10.1039/D4OB01123A" target="_blank" rel="noopener">Org. Biomol. Chem. 2024, 22, 8119-8124</a>
+                    </div>
+                </div>
+
+                <!-- Doc Project 3 -->
+                <div class="summary-block">
+                    <p class="summary-text">
+                        I developed a catalytic domino approach for the synthesis of trisubstituted 1H-pyrroles via 1,3-dipolar cycloaddition/ring-opening/C-S and C-N bond cleavage reaction sequence, starting from readily available α,β-unsaturated aldehydes and 4-metylthiazolium salts. The transformation, catalyzed by racemic diphenylprolinol trimethyl silyl ether at room temperature, afforded the desired products efficiently.
+                    </p>
+                    <div class="summary-image-placeholder">
+                        <img src="Assets/images/chemcom2025.svg" alt="Chem. Commun. Reaction Scheme 1">
+                    </div>
+                    <div class="figure-caption">
+                        <a href="https://doi.org/10.1039/D4CC05688J" target="_blank" rel="noopener">Chem. Commun., 2025, 61, 5806-5809</a>
+                    </div>
+                </div>
+
+                <!-- Doc Project 4 -->
+                <div class="summary-block">
+                    <p class="summary-text">
+                        This methodology was further extended to a catalytic asymmetric domino approach for the enantioselective synthesis of trisubstituted 4,5-dihydro-1H-pyrroles. The sequence involved 1,3-dipolar cycloaddition/ring-opening/C-S and C-N bond cleavage using (R)-diphenylprolinol trimethyl silyl ether as the chiral catalyst at 0 °C, affording the products in good yields and with excellent stereocontrol.
+                    </p>
+                </div>
+
+                <!-- Doc Project 5 -->
+                <div class="summary-block">
+                    <p class="summary-text">
+                        Apart from my doctoral research on enantioselective organocatalysis, I have also worked on homogeneous and heterogeneous transition metal (Pd, Pt, Cu), as well as metal nanoparticles (Pd, Pt, Cu) mediated reactions. This provided me with in-depth expertise in both organometallic chemistry and transition metal chemistry. In particular, I demonstrated the one-pot synthesis of 3-arylidene-2-oxindoles via a Heck-like carbocyclization/nucleophilic addition sequence, starting from N-(2-iodophenyl)-N-methyl-3-phenylpropiolamide, phenylacetylene, and a secondary amine, using binaphthyl-stabilized palladium nanoparticles (Pd-BNP) as a reusable catalyst.
+                    </p>
+                    <div class="summary-image-placeholder">
+                        <img src="Assets/images/joc2023.svg" alt="J. Org. Chem. Reaction Scheme">
+                    </div>
+                    <div class="figure-caption">
+                        <a href="https://doi.org/10.1021/acs.joc.2c02693" target="_blank" rel="noopener">J. Org. Chem. 2023, 88, 1730-1741</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS & EXPERTISE -->
+        <section id="skills" style="background-color: var(--bg-surface-light); padding: 4rem 10%; margin: 4rem 0;">
+            <div style="max-width: 1400px; margin: 0 auto;">
+                <h2>Experimental Expertise</h2>
+                <div class="grid-2" style="margin-top: 2rem;">
+                    
+                    <!-- Left Column: Skills List -->
+                    <div>
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--accent-copper); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>
+                                Synthetic Techniques
+                            </h3>
+                            <ul style="list-style: none; padding-left: 1.5rem; color: var(--text-secondary); margin-top: 1rem;">
+                                <li style="text-indent: -1.2rem; margin-bottom: 0.5rem;">✓ Multi-step complex synthesis</li>
+                                <li style="text-indent: -1.2rem; margin-bottom: 0.5rem;">✓ Asymmetric catalyst design (ligands/organocatalysts)</li>
+                                <li style="text-indent: -1.2rem; margin-bottom: 0.5rem;">✓ Inert atmosphere techniques (Schlenk/Glovebox)</li>
+                                <li style="text-indent: -1.2rem;">✓ Homogeneous & heterogeneous metal catalysis</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--accent-copper); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                Analytical Methods
+                            </h3>
+                            <ul style="list-style: none; padding-left: 1.5rem; color: var(--text-secondary); margin-top: 1rem;">
+                                <li style="text-indent: -1.2rem; margin-bottom: 0.5rem;">✓ Multi-nuclear NMR (1D/2D) - Bruker 400/500 MHz</li>
+                                <li style="text-indent: -1.2rem; margin-bottom: 0.5rem;">✓ Chiral HPLC / GC-MS</li>
+                                <li style="text-indent: -1.2rem; margin-bottom: 0.5rem;">✓ X-Ray Crystallography</li>
+                                <li style="text-indent: -1.2rem;">✓ Polarimetry & Optical Rotation</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 style="color: var(--accent-copper); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                Computational & Emerging
+                            </h3>
+                            <ul style="list-style: none; padding-left: 1.5rem; color: var(--text-secondary); margin-top: 1rem;">
+                                <li style="text-indent: -1.2rem; margin-bottom: 0.5rem;">✓ Gaussian, PC model, Gaussview</li>
+                                <li style="text-indent: -1.2rem; margin-bottom: 0.5rem;">✓ Photochemical & Electrosynthetic cells</li>
+                                <li style="text-indent: -1.2rem;">✓ Nanoparticle catalysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Glove Box Photo -->
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <div class="cover-placeholder" style="width: 100%; max-width: 450px; height: 350px;">
+                            <img src="Assets/images/pandi_glovebox.svg" alt="Dr. Pandidurai Solai at the Glovebox" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <p>Highlights from peer-reviewed journals.</p>
+            
+            <div style="margin-top: 2rem;">
+                <!-- Pub 1 -->
+                <article class="publication">
+                    <div class="pub-cover">
+                        <div class="cover-placeholder">
+                          <img src="Assets/images/chemeucover.png" alt="Journal Cover">
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h4 class="pub-title">Controlling Multiple Stereogenicity in Diaryl Ethers</h4>
+                        <div class="pub-authors">Abdelati, N.; <strong>Pandidurai, S.</strong>; Michel, G.; Jean, V. N.; Sara, C.; Stéphane, H.; Jean, R.; Olivier, C.; Gaëlle, C.; Bonne, D.</div>
+                        <div class="pub-journal">ChemistryEurope, 2025, Just Accepted</div>
+                        <div class="pub-actions">
+                            <a href="#" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Full Text
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                PDF
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                                Supp. Info
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                CCDC Data
+                            </a>
+                        </div>
+                        <div class="toc-placeholder">
+                             <img src="Assets/images/ejc2026.svg" alt="Graphical Abstract">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Pub 2 -->
+                <article class="publication">
+                    <div class="pub-cover">
+                        <div class="cover-placeholder">
+                            <img src="Assets/images/chemcomcover.png" alt="Journal Cover">
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h4 class="pub-title">Domino 1,3-dipolar Cycloaddition/Ring-Opening/Ring-Cleavage: Synthesis of Trisubstituted Pyrrole and Chiral Dihydropyrrole-3-carbaldehydes</h4>
+                        <div class="pub-authors"><strong>Pandidurai, S.</strong>; Chinababu, M.; Sekar, G.</div>
+                        <div class="pub-journal">Chemical Communications, 2025, 61, 5806-5809.</div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1039/D4CC06706A" target="_blank" rel="noopener">DOI: 10.1039/D4CC05688J</a>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://pubs.rsc.org/en/content/articlelanding/2025/cc/d4cc06706a" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Full Text
+                            </a>
+                            <a href="https://pubs.rsc.org/en/content/articlepdf/2025/cc/d4cc06706a" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                PDF
+                            </a>
+                            <a href="https://www.rsc.org/suppdata/d4/cc/d4cc06706a/d4cc06706a1.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                                Supp. Info
+                            </a>
+                            <a href="https://www.ccdc.cam.ac.uk/structures/Search?Doi=10.1039%2FD4CC06706A&DatabaseToSearch=Published" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                CCDC Data
+                            </a>
+                        </div>
+                        <div class="toc-placeholder">
+                            <img src="Assets/images/chemcom2025.svg" alt="Graphical Abstract">
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Pub 3 -->
+                <article class="publication">
+                    <div class="pub-cover">
+                        <div class="cover-placeholder">
+                            <img src="Assets/images/olcover.jpg" alt="Journal Cover">
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h4 class="pub-title">Organocatalyzed Enantio- and Diastereoselective Formal Domino 1,3-Dipolar Cycloaddition/Rearrangement: Synthesis of Chiral Pyrrolo-thiazine-2-carbaldehydes</h4>
+                        <div class="pub-authors"><strong>Pandidurai, S.</strong>; Choutipalli, V. S. K.; Subramanian, V.; Sekar, G.</div>
+                        <div class="pub-journal">Organic Letters, 2024, 26, 2971-2975.</div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1021/acs.orglett.4c00544" target="_blank" rel="noopener">DOI: 10.1021/acs.orglett.4c00713</a>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://pubs.acs.org/doi/10.1021/acs.orglett.4c00544" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Full Text
+                            </a>
+                            <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.orglett.4c00544?ref=article_openPDF" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                PDF
+                            </a>
+                            <a href="https://pubs.acs.org/doi/suppl/10.1021/acs.orglett.4c00544/suppl_file/ol4c00544_si_001.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                                Supp. Info
+                            </a>
+                            <a href="https://www.ccdc.cam.ac.uk/structures/Search?Doi=10.1021%2Facs.orglett.4c00544&DatabaseToSearch=Published" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                CCDC Data
+                            </a>
+                        </div>
+                        <div class="toc-placeholder">
+                            <img src="Assets/images/ol2024.svg" alt="Graphical Abstract">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Pub 4 -->
+                <article class="publication">
+                    <div class="pub-cover">
+                        <div class="cover-placeholder">
+                            <img src="Assets/images/obccover.jpg" alt="Journal Cover">
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h4 class="pub-title">Enantioselective Organocatalysed One-pot Synthesis of N-phenyl Thioether-tethered Tetrasubstituted Dihydropyrrole-3-carbaldehydes</h4>
+                        <div class="pub-authors"><strong>Pandidurai, S.</strong>; Sekar, G.</div>
+                        <div class="pub-journal">Organic & Biomolecular Chemistry, 2024, 22, 8119-8124.</div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1039/D4OB01411A" target="_blank" rel="noopener">DOI: 10.1039/D4OB01123A</a>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://pubs.rsc.org/en/content/articlelanding/2024/ob/d4ob01411a" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Full Text
+                            </a>
+                            <a href="https://pubs.rsc.org/en/content/articlepdf/2024/ob/d4ob01411a" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                PDF
+                            </a>
+                            <a href="https://www.rsc.org/suppdata/d4/ob/d4ob01411a/d4ob01411a1.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                                Supp. Info
+                            </a>
+                            <a href="https://www.ccdc.cam.ac.uk/structures/Search?Doi=10.1039%2FD4OB01411A&DatabaseToSearch=Published" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                CCDC Data
+                            </a>
+                        </div>
+                        <div class="toc-placeholder">
+                             <img src="Assets/images/obc2024.svg" alt="Graphical Abstract">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Pub 5 -->
+                <article class="publication">
+                    <div class="pub-cover">
+                        <div class="cover-placeholder">
+                            <img src="Assets/images/joc2023cover.jpg" alt="Journal Cover">
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h4 class="pub-title">Binaphthyl-Stabilized Palladium Nanoparticle Catalyzed Stereoselective Synthesis of 3-Arylidene-2-oxindoles via One-Pot Heck-like Carbocyclization/Nucleophilic Addition</h4>
+                        <div class="pub-authors">Parveen, N.; <strong>Pandidurai, S.</strong>; Sekar, G.</div>
+                        <div class="pub-journal">Journal of Organic Chemistry, 2023, 88, 1730-1741.</div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1021/acs.joc.2c02792" target="_blank" rel="noopener">DOI: 10.1021/acs.joc.2c02693</a>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://pubs.acs.org/doi/10.1021/acs.joc.2c02792" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Full Text
+                            </a>
+                            <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.joc.2c02792?ref=article_openPDF" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                PDF
+                            </a>
+                            <a href="https://pubs.acs.org/doi/suppl/10.1021/acs.joc.2c02792/suppl_file/jo2c02792_si_001.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                                Supp. Info
+                            </a>
+                            <a href="https://www.ccdc.cam.ac.uk/structures/Search?Doi=10.1021%2Facs.joc.2c02792&DatabaseToSearch=Published" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                CCDC Data
+                            </a>
+                        </div>
+                        <div class="toc-placeholder">
+                         
+                             <img src="Assets/images/joc2023.svg" alt="Graphical Abstract">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Pub 6 -->
+                <article class="publication">
+                    <div class="pub-cover">
+                        <div class="cover-placeholder">
+                           
+                            <img src="Assets/images/eurjoc_cover.jpg" alt="Journal Cover">
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h4 class="pub-title">Synergistic Dual Amine/Transition Metal Catalysis: Recent Advances</h4>
+                        <div class="pub-authors">Nair, V. V.; Arunprasath, D.; <strong>Pandidurai, S.</strong>; Sekar, G.</div>
+                        <div class="pub-journal">European Journal of Organic Chemistry, 2022, e202200244.</div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1002/ejoc.202200244" target="_blank" rel="noopener">DOI: 10.1002/ejoc.202200244</a>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/ejoc.202200244" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Full Text
+                            </a>
+                            <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/epdf/10.1002/ejoc.202200244" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                PDF
+                           
+                            </a>
+                        </div>
+                        <div class="toc-placeholder">
+                            <img src="Assets/images/eurjoc_toc.png" alt="Graphical Abstract">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Pub 7 -->
+                <article class="publication">
+                    <div class="pub-cover">
+                        <div class="cover-placeholder">
+                            <img src="Assets/images/chemrxiv-logo.svg" alt="Journal Cover">
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h4 class="pub-title">Organocatalyzed Enantio- and Diastereoselective Domino [3+2]-Dipolar Cycloaddition: Synthesis of Chiral Pyrrolo-thiazine- 2-carbaldehydes and Dihydropyrrole-3- carbaldehydes</h4>
+                        <div class="pub-authors"><strong>Pandidurai, S.</strong>; Choutipalli, V. S. K.; Subramanian, V.; Sekar, G.</div>
+                        <div class="pub-journal">ChemRxiv, 2023.</div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.26434/chemrxiv-2023-jx61g" target="_blank" rel="noopener">DOI: 10.26434/chemrxiv-2023-jx61g</a>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2023-jx61g" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Full Text
+                            </a>
+                            <a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2023-jx61g?download=true&redirectToLatest=false" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                PDF
+                            </a>
+                            <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2023-jx61g#supplementary-materials" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                                Supp. Info
+                            </a>
+                            <a href="https://www.ccdc.cam.ac.uk/structures/Search?Doi=10.1021%2Facs.orglett.4c00544&DatabaseToSearch=Published" target="_blank" rel="noopener" class="btn-journal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                CCDC Data
+                            </a>
+                        </div>
+                        <div class="toc-placeholder">
+                        
+                            <img src="Assets/images/archivetoc.gif" alt="Graphical Abstract"> 
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PATENTS -->
+        <section id="patents" style="background-color: var(--bg-surface-light); padding: 4rem 10%; margin: 4rem 0;">
+            <div style="max-width: 1400px; margin: 0 auto;">
+                <h2>Granted Patents</h2>
+                
+                <div style="margin-top: 2rem;">
+                    <!-- New Patent -->
+                    <article class="publication">
+                        <div class="pub-content">
+                            <h4 class="pub-title" style="color: var(--accent-copper);">Process for Preparation of Substituted Tetrahydroquinoline-4-one Compounds</h4>
+                            <div class="pub-authors">Rajesh, K. B.; <strong>Pandidurai, S.</strong>; Selvam, R.; Arvi, V.; Sekar, G.</div>
+                            <div class="pub-journal">Indian Patent Application No.: 202541074805</div>
+                            <div class="pub-links">Filed: 2025</div>
+                            <div class="pub-actions">
+                                <a href="#" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    Patent Extended Abstract
+                                </a>
+                                <a href="#" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                    Patent Certificate
+                                </a>
+                            
+                        </div>
+                    </article>
+
+                    <article class="publication">
+                        <div class="pub-content">
+                            <h4 class="pub-title" style="color: var(--accent-copper);">Synthesis of Trisubstituted 1H-Pyrrole-3-Carbaldehyde Compounds</h4>
+                            <div class="pub-authors"><strong>Pandidurai, S.</strong>; Kishore, S.; Sekar, G.</div>
+                            <div class="pub-journal">Indian Patent Application No.: 202441067200</div>
+                            <div class="pub-links">Grant No.: 562780 (2025)</div>
+                            <div class="pub-actions">
+                                <a href="Assets/pdfs/IDF2999_1770354340.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    Patent Extended Abstract
+                                </a>
+                                <a href="Assets/pdfs/patent-2-certificate.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                    Patent Certificate
+                                </a>
+                            </div>
+                            <div class="toc-placeholder">
+                                <img src="Assets/images/patent_2025.svg" alt="Patent Graphic">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication">
+                        <div class="pub-content">
+                            <h4 class="pub-title" style="color: var(--accent-copper);">Asymmetric Synthesis of Enantioenriched Trisubstituted 4,5-Dihydro-1H-pyrrole-3-carbaldehyde Compounds</h4>
+                            <div class="pub-authors"><strong>Pandidurai, S.</strong>; Sekar, G.</div>
+                            <div class="pub-journal">Indian Patent Application No.: 202441067175</div>
+                            <div class="pub-links">Grant No.: 564108 (2025)</div>
+                            <div class="pub-actions">
+                                <a href="Assets/pdfs/IDF3022_1765449025.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    Patent Extended Abstract
+                                </a>
+                                <a href="Assets/pdfs/patent-3-certificate.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                    Patent Certificate
+                                </a>
+                            </div>
+                            <div class="toc-placeholder">
+                                <img src="Assets/images/patent_2025a.svg" alt="Patent Graphic">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication">
+                        <div class="pub-content">
+                            <h4 class="pub-title" style="color: var(--accent-copper);">Enantio-and Diastereoselective Process for One-step Synthesis of Enantioenriched Pyrrolo[1,2-d][1,4]thiazine-2-carbaldehydes Core Using Chiral Organocatalyst</h4>
+                            <div class="pub-authors"><strong>Pandidurai, S.</strong>; Sekar, G.</div>
+                            <div class="pub-journal">Indian Patent Application No.: 202241065630</div>
+                            <div class="pub-links">Grant No.: 454952 (2023)</div>
+                            <div class="pub-actions">
+                                <a href="Assets/pdfs/pexabs.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    Patent Extended Abstract
+                                </a>
+                                <a href="Assets/pdfs/IDF 2421 - Patent Certificate 1.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                    Patent Certificate
+                                </a>
+                            </div>
+                            <div class="toc-placeholder">
+                                <img src="Assets/images/patent_2025a.svg" alt="Patent Graphic">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section id="achievements">
+            <h2>Honors & Achievements</h2>
+            <div class="grid-2" style="margin-top: 2rem;">
+                
+                <!-- Left Column: List of Achievements -->
+                <div class="card">
+                    <ul style="list-style: none; color: var(--text-secondary);">
+                        
+                        <!-- Achievement 1 -->
+                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 15px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <div>
+                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Seal of Excellence, MSCA Postdoctoral Fellowship 2025</strong><br>
+                                Awarded by the European Commission for a high-quality proposal (Score: 85.20%) meeting excellence threshold.
+                            </div>
+                        </li>
+                        
+                        <!-- Achievement 2 -->
+                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 15px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            <div>
+                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Qualified Assistant Professor Lectureship (NET) in Chemical Sciences</strong><br>
+                                Council for Scientific and Industrial Research (CSIR) - UGC India, December-2019. Secured All India Rank-49.
+                            </div>
+                        </li>
+                        
+                        <!-- Achievement 3 -->
+                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 15px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            <div>
+                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Qualified Graduate Aptitude Test in Engineering (GATE)-2019 in Chemical Sciences</strong><br>
+                                Secured All India Rank-2834.
+                            </div>
+                        </li>
+
+                        <!-- Achievement 4 -->
+                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 15px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            <div>
+                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Qualified Junior Research Fellowship (JRF) in Chemical Sciences</strong><br>
+                                Council for Scientific and Industrial Research (CSIR) – UGC, India, June-2018. Secured All India Rank-59.
+                            </div>
+                        </li>
+
+                        <!-- Achievement 5 -->
+                        <li style="display: flex; align-items: flex-start; gap: 15px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            <div>
+                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Qualified Graduate Aptitude Test in Engineering (GATE)-2018 in Chemical Sciences</strong><br>
+                                Secured All India Rank-1317.
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                
+                <!-- Right Column: Seal of Excellence Certificate Image -->
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <div class="cover-placeholder" style="width: 100%; max-width: 450px; height: auto; min-height: 300px; padding: 10px;">
+                        <img src="Assets/images/sealofexcellence.png" alt="Seal of Excellence Award Certificate">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONFERENCES -->
+        <section id="conferences" style="background-color: var(--bg-surface-light); padding: 4rem 10%; margin: 4rem 0;">
+            <div style="max-width: 1400px; margin: 0 auto;">
+                <h2>Conferences & Presentations</h2>
+                
+                <div class="conference-layout">
+                    <!-- Left Column: Timeline -->
+                    <div class="timeline">
+                        <!-- Conference 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">Oct 2025</div>
+                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Oral Presentation</h3>
+                            <p><strong>Congress on Organic Chemistry Days (JCO-2025)</strong></p>
+                            <p>École Polytechnique, Palaiseau, France (Oct 29-31, 2025)</p>
+                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                                <a href="Assets/pdfs/JCO-2025-Slide.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    Download Slide
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Conference 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">Oct 2023</div>
+                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Oral Presentation</h3>
+                            <p><strong>Conferences for Young Researches XVIII J-NOST-2023</strong></p>
+                            <p>Department of Chemistry<br>Indian Institute of Science Education and Research (IISER)<br> Pune, India (Oct 10-12, 2023)</p>
+                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                                <a href="Assets/pdfs/JNOST-2023-Slide.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    Download Slide
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Conference 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">Sep 2023</div>
+                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Oral Presentation</h3>
+                            <p><strong>Chemistry In-House Symposium-2023 (CiHS-2023)</strong></p>
+                            <p>Department of Chemistry<br> Indian Institute of Technology Madras<br> Chennai, India (Sep 23, 2023)</p>
+                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                                <a href="Assets/pdfs/CiHS-2023-Slide.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    Download Slide
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Conference 4 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">Dec 2022</div>
+                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Poster Presentation</h3>
+                            <p><strong>2nd National Conference on Contemporary Facets in Organic Synthesis (CFOS-2022)</strong></p>
+                            <p>Indian Institute of Technology Roorkee<br>Uttarakhand, India (Dec 1-4, 2022)</p>
+                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                                <a href="Assets/pdfs/CFOS-2022-Poster.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                                    Download Poster
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Conference 5 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">Sep 2022</div>
+                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Poster Presentation</h3>
+                            <p><strong>Chemistry In-House Symposium-2022 (CiHS-2022)</strong></p>
+                            <p>Department of Chemistry<br> Indian Institute of Technology Madras<br> Chennai, India (Sep 22, 2022)</p>
+                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                                <a href="Assets/pdfs/CiHS-2022-Poster.pdf" target="_blank" rel="noopener" class="btn-journal">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                                    Download Poster
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Photos -->
+                    <div class="conference-photos">
+
+                        <div class="conf-photo-container">
+                            <img src="Assets/images/IMG_0527.jpeg" alt="Group Photo CFOS-2022">
+                            <div class="conf-photo-caption">Research Group Photo – Summer 2026 ⭐</div>
+                        </div>
+                        <div class="conf-photo-container">
+                            <img src="Assets/images/jco2025.jpeg" alt="Group Photo JCO-2025">
+                            <div class="conf-photo-caption">Congress on Organic Chemistry Days (JCO-2025)</div>
+                        </div>
+                        <div class="conf-photo-container">
+                            <img src="Assets/images/roorkee.jpeg" alt="Group Photo CFOS-2022">
+                            <div class="conf-photo-caption">National Conference on Contemporary Facets in Organic Synthesis (CFOS-2022)</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" style="background-color: var(--bg-surface-light); padding: 5rem 10%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2>Get In Touch</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-secondary);">
+                    I am always open to discussing research collaborations, sharing scientific insights, and exploring new academic or industrial opportunities.
+                </p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
+                    <a href="mailto:yespandiduraiiitm@gmail.com" class="btn" style="display: flex; align-items: center; gap: 10px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        yespandiduraiiitm[at]gmail[dot]com
+                    </a>
+                    <a href="mailto:solai.pandidurai[at]univ-amu[dot]fr" class="btn" style="display: flex; align-items: center; gap: 10px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        solai.pandidurai[at]univ-amu[dot]fr
+                    </a>
+                </div>
+                <div style="margin-top: 3rem; color: var(--text-secondary);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="margin-bottom: 0.5rem;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <p>iSm2 Institute of Molecular Sciences of Marseille<br>Aix-Marseille University, Marseille, France</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-central">
+            <div>Copyright © 2026 Pandidurai Solai</div>
+        </div>
+        
+        <div class="footer-design">
+            Web Design: Dr. Hariprasad Narayanan
+            <a href="mailto:hariprasadmandur[at]gmail[dot]com" title="Email Designer" style="color: var(--text-secondary); display: inline-flex; transition: var(--transition);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/hariprasad-narayanan-04585b320/" title="Designer's LinkedIn" target="_blank" rel="noopener" style="color: var(--text-secondary); display: inline-flex; transition: var(--transition);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Image Modal (Lightbox) -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="expandedImg">
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Setup Modal Functionality
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("expandedImg");
+            const closeBtn = document.getElementsByClassName("close-modal")[0];
+
+            // Target all image containers including the new summary placeholders AND the profile image placeholder
+            const zoomableContainers = document.querySelectorAll('.summary-image-placeholder, .toc-placeholder, .image-placeholder, .cover-placeholder, .hero-molecules-banner, .conf-photo-container');
+            
+            zoomableContainers.forEach(container => {
+                container.addEventListener('click', function(e) {
+                    // Find the image inside the clicked container
+                    // For the banner, make sure we only zoom the specific molecule that was clicked
+                    let img;
+                    if (this.classList.contains('hero-molecules-banner')) {
+                        if (e.target.tagName.toLowerCase() === 'img') {
+                            img = e.target;
+                        } else {
+                            return; // Do nothing if they clicked the empty space between molecules
+                        }
+                    } else {
+                        img = this.querySelector('img');
+                    }
+                    
+                    // Only open the modal if you have actually added an image (uncommented the img tag)
+                    if (img && img.src) { 
+                        modal.style.display = "flex";
+                        modalImg.src = img.src;
+                        
+                        // Handle the inversion logic for hero molecules so they show up correctly in the white modal
+                        if (img.classList.contains('floating-mol') || img.parentElement.classList.contains('hero-molecules-banner')) {
+                            modalImg.classList.add('inverted');
+                        } else {
+                            modalImg.classList.remove('inverted');
+                        }
+                    }
+                });
+            });
+
+            // Close modal when clicking the "X"
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // Close modal when clicking anywhere in the dark background
+            modal.onclick = function(e) {
+                if (e.target !== modalImg) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Interactive Diagram Logic
+            const diagramNodes = document.querySelectorAll('.diagram-node');
+            const centerTitle = document.getElementById('center-title');
+            const centerDesc = document.getElementById('center-desc');
+            const centerIconContainer = document.getElementById('center-icon-svg');
+            
+            const defaultTitle = "Core Expertise";
+            const defaultDesc = "Hover over any node in the network to view a detailed breakdown of the research theme.";
+            const defaultIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H15M10 9L6 20C5.6 20.8 6.2 22 7.1 22H16.9C17.8 22 18.4 20.8 18 20L14 9M10 9V3M14 9V3M6 16H18"/></svg>`;
+
+            diagramNodes.forEach(node => {
+                node.addEventListener('mouseenter', () => {
+                    const title = node.getAttribute('data-title');
+                    const desc = node.getAttribute('data-desc');
+                    const iconSVG = node.querySelector('svg').outerHTML;
+
+                    centerTitle.style.opacity = 0;
+                    centerDesc.style.opacity = 0;
+                    centerIconContainer.style.opacity = 0;
+
+                    setTimeout(() => {
+                        centerTitle.textContent = title;
+                        centerDesc.textContent = desc;
+                        centerIconContainer.innerHTML = iconSVG;
+                        
+                        centerTitle.style.opacity = 1;
+                        centerDesc.style.opacity = 1;
+                        centerIconContainer.style.opacity = 1;
+                        
+                        // Style the cloned icon to match the active state
+                        const newIcon = centerIconContainer.querySelector('svg');
+                        newIcon.style.stroke = "var(--accent-blue)";
+                        newIcon.style.width = "40px";
+                        newIcon.style.height = "40px";
+                    }, 150);
+
+                    diagramNodes.forEach(n => n.classList.remove('active'));
+                    node.classList.add('active');
+                });
+
+                node.addEventListener('mouseleave', () => {
+                    centerTitle.style.opacity = 0;
+                    centerDesc.style.opacity = 0;
+                    centerIconContainer.style.opacity = 0;
+
+                    setTimeout(() => {
+                        centerTitle.textContent = defaultTitle;
+                        centerDesc.textContent = defaultDesc;
+                        centerIconContainer.innerHTML = defaultIcon;
+                        
+                        centerTitle.style.opacity = 1;
+                        centerDesc.style.opacity = 1;
+                        centerIconContainer.style.opacity = 1;
+                        
+                        const resetIcon = centerIconContainer.querySelector('svg');
+                        resetIcon.style.stroke = "var(--accent-copper)";
+                        resetIcon.style.width = "40px";
+                        resetIcon.style.height = "40px";
+                    }, 150);
+
+                    node.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
