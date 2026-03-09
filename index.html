@@ -759,6 +759,32 @@
             color: var(--accent-blue-hover);
         }
 
+        /* --- SPA Routing Styles --- */
+        main > section {
+            display: none !important; /* Force hide all sections by default */
+        }
+
+        main > section.active-section {
+            display: block !important; /* Show active section */
+            animation: pageFadeIn 0.4s ease-out forwards;
+        }
+
+        /* The Hero section requires flexbox instead of block */
+        main > section#home.active-section {
+            display: flex !important;
+        }
+
+        .nav-links a.active-nav {
+            color: var(--accent-copper);
+            border-bottom: 2px solid var(--accent-copper);
+            padding-bottom: 2px;
+        }
+
+        @keyframes pageFadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         /* Navigation */
         header {
             position: fixed;
@@ -872,7 +898,6 @@
         .hero {
             padding: 8rem 10% 8rem;
             min-height: 100vh;
-            display: flex;
             flex-direction: column;
             justify-content: center;
             position: relative;
@@ -2369,14 +2394,17 @@
                             <div class="pub-journal">Indian Patent Application No.: 202541074805</div>
                             <div class="pub-links">Filed: 2025</div>
                             <div class="pub-actions">
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-journal">
+                                <a href="assets/pdfs/IDF3407_1768898915.pdf" target="_blank" rel="noopener noreferrer" class="btn-journal">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                                     Patent Extended Abstract
                                 </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-journal">
+                                <a href="assets/pdfs/IDF3407_1768898915.pdf" target="_blank" rel="noopener noreferrer" class="btn-journal">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
                                     Patent Certificate
                                 </a>
+                            </div>
+                            <div class="toc-placeholder">
+                              <img src="assets/images/patent2025.svg" alt="Patent Graphic">
                             </div>
                         </div>
                     </article>
@@ -2670,6 +2698,54 @@
     ================================================================ -->
     <script>
         // ---------------------------------------------------------------
+        // SPA Hash Router (Tabbed Navigation)
+        // ---------------------------------------------------------------
+        function handleRouting() {
+            // Get the current hash, default to home
+            var hash = window.location.hash || '#home';
+            
+            // 1. Hide all sections & remove active classes
+            var sections = document.querySelectorAll('main > section');
+            sections.forEach(function(sec) {
+                sec.classList.remove('active-section');
+            });
+            
+            // 2. Show target section
+            var targetSection = document.querySelector(hash);
+            if (targetSection && targetSection.tagName.toLowerCase() === 'section') {
+                targetSection.classList.add('active-section');
+                window.scrollTo(0, 0); // Jump to top of the new "page"
+            } else {
+                // Fallback if hash is invalid
+                document.getElementById('home').classList.add('active-section');
+                history.replaceState(null, null, '#home');
+                hash = '#home';
+            }
+
+            // 3. Update Navigation Links Highlighting
+            var navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(function(link) {
+                link.classList.remove('active-nav');
+                // Highlight link if it matches current hash
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active-nav');
+                    
+                    // If it's a dropdown item, also highlight the parent menu item
+                    var parentDropdown = link.closest('.dropdown');
+                    if (parentDropdown) {
+                        var parentLink = parentDropdown.previousElementSibling;
+                        if (parentLink && parentLink.tagName.toLowerCase() === 'a') {
+                            parentLink.classList.add('active-nav');
+                        }
+                    }
+                }
+            });
+        }
+
+        // Listen for URL hash changes (when user clicks nav links or uses back/forward buttons)
+        window.addEventListener('hashchange', handleRouting);
+
+        // ---------------------------------------------------------------
         // [FIX #5] Anti-harvesting email assembly
         // Emails are split and ROT13'd so no plain address exists in source.
         // ---------------------------------------------------------------
@@ -2711,6 +2787,9 @@
         // Modal / Lightbox
         // ---------------------------------------------------------------
         document.addEventListener('DOMContentLoaded', function () {
+            // Run the router immediately on page load
+            handleRouting();
+
             var modal    = document.getElementById('imageModal');
             var modalImg = document.getElementById('expandedImg');
             var closeBtn = document.getElementsByClassName('close-modal')[0];
