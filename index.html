@@ -6,22 +6,7 @@
     
     <!-- ============================================================
          SECURITY HEADERS
-         NOTE: frame-ancestors only works via HTTP response headers
-         (not meta tags). For GitHub Pages, add a _headers file or
-         use Cloudflare to set: X-Frame-Options: DENY,
-         X-Content-Type-Options: nosniff, and frame-ancestors 'none'.
     ============================================================ -->
-
-    <!-- [SECURITY FIX #1] Hardened Content Security Policy
-         Changes from original:
-         - Added object-src 'none'       → blocks Flash/plugin injection
-         - Added base-uri 'self'         → blocks <base> tag injection
-         - Added form-action 'none'      → blocks unauthorized form submissions
-         - Added upgrade-insecure-requests → forces HTTP→HTTPS upgrades
-         Note: 'unsafe-inline' for style-src is retained because the page
-         uses extensive inline style attributes. For script-src, inline
-         scripts are required; move to an external .js file + remove
-         'unsafe-inline' for maximum hardening. -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
@@ -33,42 +18,17 @@
         form-action 'none';
         upgrade-insecure-requests;
     ">
-
-    <!-- [SECURITY FIX #2] Referrer Policy
-         Prevents the full URL from leaking to third-party sites via the
-         Referer header. 'strict-origin-when-cross-origin' is the modern
-         safe default: sends origin only on cross-origin requests. -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
-
-    <!-- [SECURITY FIX #3] Permissions Policy
-         Explicitly disables browser APIs that this portfolio has no need
-         for, reducing the attack surface if a script is ever injected. -->
     <meta http-equiv="Permissions-Policy" content="
-        camera=(),
-        microphone=(),
-        geolocation=(),
-        payment=(),
-        usb=(),
-        magnetometer=(),
-        accelerometer=(),
-        gyroscope=()
+        camera=(), microphone=(), geolocation=(), payment=(), usb=(),
+        magnetometer=(), accelerometer=(), gyroscope=()
     ">
 
-    <!-- ═══════════════════════════════════════════════════════════════
+    <!-- ============================================================
          PROFESSIONAL SEO OPTIMIZATION
-         Scope: Identity · Keywords · Open Graph · Twitter · hreflang
-                Schema.org: Person · WebSite · BreadcrumbList ·
-                ItemList (Publications) · FAQPage
-    ═══════════════════════════════════════════════════════════════ -->
-
-    <!-- PRIMARY META -->
-    <!-- Title: brand + specialization + location keyword (≤60 chars) -->
+    ============================================================ -->
     <title>Dr. Pandidurai Solai | Asymmetric Organocatalysis &amp; Atroposelective Synthesis | Aix-Marseille University</title>
-
-    <!-- Description: 155 chars, front-loads primary keywords -->
     <meta name="description" content="Dr. Pandidurai Solai — Postdoctoral Research Fellow at iSm2, Aix-Marseille University. Specialist in asymmetric organocatalysis, atroposelective synthesis, domino reactions, 1,3-dipolar cycloaddition, and heterocyclic chemistry. MSCA Seal of Excellence 2025. Open to research collaborations.">
-
-    <!-- COMPREHENSIVE KEYWORDS — primary, secondary, long-tail & LSI -->
     <meta name="keywords" content="
         Pandidurai Solai, Dr Pandidurai Solai, S Pandidurai, Pandidurai S,
         asymmetric catalysis, organocatalysis, asymmetric organocatalysis,
@@ -111,583 +71,46 @@
         Organic Letters, Chemical Communications, Organic and Biomolecular Chemistry,
         Journal of Organic Chemistry, European Journal of Organic Chemistry
     ">
-
     <meta name="author" content="Dr. Pandidurai Solai">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
-    <meta name="google-site-verification" content="amuvthizMj4Ryc8mTf77nlCH8W51wMWsi7HO8U1znkc" />
     <meta name="theme-color" content="#B87333">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="14 days">
-    <meta name="rating" content="general">
-
-    <!-- Canonical & hreflang -->
     <link rel="canonical" href="https://yespandidurai.github.io/">
-    <link rel="alternate" hreflang="en" href="https://yespandidurai.github.io/">
-    <link rel="alternate" hreflang="x-default" href="https://yespandidurai.github.io/">
 
-    <!-- Open Graph — full set for maximum richness on LinkedIn / Facebook / WhatsApp -->
+    <!-- Open Graph & Twitter -->
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://yespandidurai.github.io/">
-    <meta property="og:site_name" content="Dr. Pandidurai Solai — Synthetic Organic Chemist">
-    <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Dr. Pandidurai Solai | Asymmetric Organocatalysis &amp; Atroposelective Synthesis">
     <meta property="og:description" content="Postdoctoral Research Fellow at iSm2, Aix-Marseille University. Designing catalytic strategies for the stereoselective construction of complex heterocycles and non-biaryl atropisomers.">
     <meta property="og:image" content="https://yespandidurai.github.io/assets/images/pandi.jpeg">
-    <meta property="og:image:secure_url" content="https://yespandidurai.github.io/assets/images/pandi.jpeg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dr. Pandidurai Solai, Synthetic Organic Chemist">
-    <meta property="profile:first_name" content="Pandidurai">
-    <meta property="profile:last_name" content="Solai">
-    <meta property="profile:username" content="Yespandidurai">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@Yespandidurai">
-    <meta name="twitter:creator" content="@Yespandidurai">
     <meta name="twitter:title" content="Dr. Pandidurai Solai | Asymmetric Organocatalysis &amp; Atroposelective Synthesis">
-    <meta name="twitter:description" content="Postdoctoral Researcher at Aix-Marseille University. Expert in asymmetric catalysis, domino reactions, and atroposelective synthesis of complex atropisomers.">
+    <meta name="twitter:description" content="Postdoctoral Researcher at Aix-Marseille University. Expert in asymmetric catalysis, domino reactions, and atroposelective synthesis.">
     <meta name="twitter:image" content="https://yespandidurai.github.io/assets/images/pandi.jpeg">
-    <meta name="twitter:image:alt" content="Dr. Pandidurai Solai, Synthetic Organic Chemist">
-    <meta name="twitter:label1" content="Institution">
-    <meta name="twitter:data1" content="Aix-Marseille University, France">
-    <meta name="twitter:label2" content="Research Focus">
-    <meta name="twitter:data2" content="Asymmetric Catalysis &amp; Atropisomers">
 
-    <!-- ═══════════════════════════════════════════════════════════════
-         SCHEMA.ORG STRUCTURED DATA  (JSON-LD)
-         1. WebSite  — sitelinks searchbox eligibility
-         2. Person   — full researcher identity for Knowledge Graph
-         3. ItemList — all 5 publications as ScholarlyArticle
-         4. FAQPage  — 25 expert Q&A entries for rich results
-    ═══════════════════════════════════════════════════════════════ -->
-
-    <!-- 1. WebSite schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Dr. Pandidurai Solai — Synthetic Organic Chemist",
-      "url": "https://yespandidurai.github.io/",
-      "description": "Official portfolio of Dr. Pandidurai Solai, Postdoctoral Research Fellow at iSm2, Aix-Marseille University. Research in asymmetric organocatalysis, atroposelective synthesis, and heterocyclic chemistry.",
-      "inLanguage": "en-US",
-      "author": {
-        "@type": "Person",
-        "name": "Dr. Pandidurai Solai"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://yespandidurai.github.io/#{search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <!-- 2. Person schema — full Knowledge Graph enrichment -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Dr. Pandidurai Solai",
-      "givenName": "Pandidurai",
-      "familyName": "Solai",
-      "honorificPrefix": "Dr.",
       "jobTitle": "Postdoctoral Research Fellow",
-      "description": "Synthetic organic chemist specialising in asymmetric organocatalysis, atroposelective synthesis of non-biaryl atropisomers, domino reactions, 1,3-dipolar cycloaddition, and transition metal catalysis.",
-      "nationality": "Indian",
-      "birthPlace": "Salakuppam, Tiruvannamalai, Tamil Nadu, India",
       "url": "https://yespandidurai.github.io/",
-      "image": "https://yespandidurai.github.io/assets/images/pandi.jpeg",
-      "affiliation": {
-        "@type": "ResearchOrganization",
-        "name": "iSm2 — Institute of Molecular Sciences of Marseille",
-        "parentOrganization": {
-          "@type": "CollegeOrUniversity",
-          "name": "Aix-Marseille University",
-          "address": {"@type": "PostalAddress", "addressLocality": "Marseille", "addressCountry": "FR"}
-        }
-      },
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Indian Institute of Technology Madras",
-          "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressCountry": "IN"}
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Bharathidasan University",
-          "address": {"@type": "PostalAddress", "addressLocality": "Tiruchirappalli", "addressCountry": "IN"}
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Presidency College (Autonomous)",
-          "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressCountry": "IN"}
-        }
-      ],
-      "worksFor": {
-        "@type": "ResearchOrganization",
-        "name": "iSm2 — Aix-Marseille University"
-      },
       "sameAs": [
         "https://www.linkedin.com/in/dr-pandidurai-s-8716551aa/",
         "https://scholar.google.com/citations?user=fAdfZRQAAAAJ&hl=en",
         "https://orcid.org/0000-0002-0167-1717",
-        "https://x.com/Yespandidurai",
-        "https://sekargroup.com/",
-        "https://ism2.univ-amu.fr/en/teams/stereo/presentation"
-      ],
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "degree",
-          "educationalLevel": "Doctoral Degree",
-          "name": "Ph.D. in Synthetic Organic Chemistry",
-          "recognizedBy": {"@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Madras"}
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "degree",
-          "educationalLevel": "Masters Degree",
-          "name": "M.Sc. in Chemistry",
-          "recognizedBy": {"@type": "CollegeOrUniversity", "name": "Bharathidasan University"}
-        }
-      ],
-      "award": [
-        "Seal of Excellence — MSCA Postdoctoral Fellowship 2025 (Score: 85.20%)",
-        "CSIR JRF — Junior Research Fellowship in Chemical Sciences, All India Rank 59 (2018)",
-        "CSIR NET — Lectureship in Chemical Sciences, All India Rank 49 (2019)",
-        "GATE 2018 — Chemical Sciences, All India Rank 1317",
-        "GATE 2019 — Chemical Sciences, All India Rank 2834"
-      ],
-      "knowsAbout": [
-        "Asymmetric catalysis", "Organocatalysis", "Atroposelective synthesis",
-        "Atropisomers", "Non-biaryl atropisomers", "Axial chirality",
-        "Domino reactions", "Cascade reactions", "1,3-Dipolar cycloaddition",
-        "Enantioselective synthesis", "Diastereoselective synthesis",
-        "Chiral phosphoric acid catalysis", "Chiral amine catalysis",
-        "Diphenylprolinol TMS ether", "Benzothiazolium salts",
-        "Pyrrolo-thiazines", "Dihydropyrroles", "Heterocyclic chemistry",
-        "Cyclopropane chemistry", "Donor-acceptor cyclopropanes",
-        "Palladium nanoparticles", "Transition metal catalysis",
-        "Heck reaction", "Oxindole synthesis",
-        "Photochemistry", "Electrochemistry", "Biocatalysis",
-        "Drug design", "Medicinal chemistry", "Green chemistry",
-        "Desymmetrization", "Stereocontrol", "C-S bond formation"
+        "https://x.com/Yespandidurai"
       ]
     }
     </script>
 
-    <!-- 3. Publications as ScholarlyArticle ItemList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Selected Publications — Dr. Pandidurai Solai",
-      "numberOfItems": 6,
-      "itemListElement": [
-        {
-          "@type": "ListItem", "position": 1,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "headline": "Controlling Multiple Stereogenicity in Diaryl Ethers",
-            "author": [
-              {"@type": "Person", "name": "Abdelati, N."},
-              {"@type": "Person", "name": "Pandidurai, S."},
-              {"@type": "Person", "name": "Bonne, D."}
-            ],
-            "datePublished": "2025",
-            "isPartOf": {"@type": "Periodical", "name": "ChemistryEurope"},
-            "about": "Atroposelective synthesis, non-biaryl atropisomers, diaryl ethers, chiral phosphoric acid"
-          }
-        },
-        {
-          "@type": "ListItem", "position": 2,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "headline": "Domino 1,3-dipolar Cycloaddition/Ring-Opening/Ring-Cleavage: Synthesis of Trisubstituted Pyrrole and Chiral Dihydropyrrole-3-carbaldehydes",
-            "author": [
-              {"@type": "Person", "name": "Pandidurai, S."},
-              {"@type": "Person", "name": "Chinababu, M."},
-              {"@type": "Person", "name": "Sekar, G."}
-            ],
-            "datePublished": "2025",
-            "url": "https://doi.org/10.1039/D4CC06706A",
-            "isPartOf": {"@type": "Periodical", "name": "Chemical Communications"},
-            "about": "Domino reactions, 1,3-dipolar cycloaddition, pyrrole synthesis, dihydropyrroles, organocatalysis"
-          }
-        },
-        {
-          "@type": "ListItem", "position": 3,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "headline": "Organocatalyzed Enantio- and Diastereoselective Formal Domino 1,3-Dipolar Cycloaddition/Rearrangement: Synthesis of Chiral Pyrrolo-thiazine-2-carbaldehydes",
-            "author": [
-              {"@type": "Person", "name": "Pandidurai, S."},
-              {"@type": "Person", "name": "Choutipalli, V. S. K."},
-              {"@type": "Person", "name": "Subramanian, V."},
-              {"@type": "Person", "name": "Sekar, G."}
-            ],
-            "datePublished": "2024",
-            "url": "https://doi.org/10.1021/acs.orglett.4c00544",
-            "isPartOf": {"@type": "Periodical", "name": "Organic Letters", "issueNumber": "26"},
-            "pageStart": "2971", "pageEnd": "2975",
-            "about": "Asymmetric organocatalysis, pyrrolo-thiazines, benzothiazolium salts, domino cycloaddition, enantioselective"
-          }
-        },
-        {
-          "@type": "ListItem", "position": 4,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "headline": "Enantioselective Organocatalysed One-pot Synthesis of N-phenyl Thioether-tethered Tetrasubstituted Dihydropyrrole-3-carbaldehydes",
-            "author": [
-              {"@type": "Person", "name": "Pandidurai, S."},
-              {"@type": "Person", "name": "Sekar, G."}
-            ],
-            "datePublished": "2024",
-            "url": "https://doi.org/10.1039/D4OB01411A",
-            "isPartOf": {"@type": "Periodical", "name": "Organic and Biomolecular Chemistry", "issueNumber": "22"},
-            "pageStart": "8119", "pageEnd": "8124",
-            "about": "Organocatalysis, dihydropyrroles, C-S bond formation, enantioselective, one-pot synthesis"
-          }
-        },
-        {
-          "@type": "ListItem", "position": 5,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "headline": "Binaphthyl-Stabilized Palladium Nanoparticle Catalyzed Stereoselective Synthesis of 3-Arylidene-2-oxindoles via One-Pot Heck-like Carbocyclization/Nucleophilic Addition",
-            "author": [
-              {"@type": "Person", "name": "Parveen, N."},
-              {"@type": "Person", "name": "Pandidurai, S."},
-              {"@type": "Person", "name": "Sekar, G."}
-            ],
-            "datePublished": "2023",
-            "url": "https://doi.org/10.1021/acs.joc.2c02792",
-            "isPartOf": {"@type": "Periodical", "name": "Journal of Organic Chemistry", "issueNumber": "88"},
-            "pageStart": "1730", "pageEnd": "1741",
-            "about": "Palladium nanoparticles, Heck reaction, oxindoles, heterogeneous catalysis, carbocyclization"
-          }
-        },
-        {
-          "@type": "ListItem", "position": 6,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "headline": "Synergistic Dual Amine/Transition Metal Catalysis: Recent Advances",
-            "author": [
-              {"@type": "Person", "name": "Nair, V. V."},
-              {"@type": "Person", "name": "Arunprasath, D."},
-              {"@type": "Person", "name": "Pandidurai, S."},
-              {"@type": "Person", "name": "Sekar, G."}
-            ],
-            "datePublished": "2022",
-            "url": "https://doi.org/10.1002/ejoc.202200244",
-            "isPartOf": {"@type": "Periodical", "name": "European Journal of Organic Chemistry"},
-            "about": "Dual catalysis, amine catalysis, transition metal catalysis, synergistic catalysis"
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- 4. FAQPage schema — 25 Q&A entries for Google Rich Results -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is asymmetric catalysis and why is it important in organic chemistry?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Asymmetric catalysis is a branch of synthetic chemistry where a chiral catalyst selectively produces one mirror-image form (enantiomer) of a molecule over another. This is critical in pharmaceutical development because the two enantiomers of a drug molecule can have vastly different biological activities — one may be therapeutic while the other may be inert or harmful. Dr. Pandidurai Solai specialises in developing organocatalytic methods that achieve high enantioselectivity (up to >99% ee) in the construction of complex heterocyclic frameworks."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is organocatalysis and how does it differ from transition metal catalysis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Organocatalysis uses small organic molecules — rather than metal complexes — as catalysts to promote chemical reactions. Key advantages include low toxicity, low cost, stability in air and moisture, and compatibility with large-scale pharmaceutical synthesis. Dr. Pandidurai Solai's work focuses on chiral secondary amine catalysts, such as diphenylprolinol TMS ether, which activate α,β-unsaturated aldehydes through enamine or iminium ion intermediates, enabling highly stereoselective transformations without any metal involvement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are atropisomers and why are they important in drug discovery?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Atropisomers are stereoisomers that arise from restricted rotation around a single bond, creating stable chiral axes rather than conventional stereocenters. They are increasingly important in medicinal chemistry because many clinically approved drugs and bioactive natural products are atropisomeric. Selective synthesis of a single atropisomer is challenging but critical, as each rotational isomer can exhibit distinct pharmacological profiles. Dr. Pandidurai Solai's postdoctoral research at Aix-Marseille University specifically targets the enantioselective synthesis of heteroatom-linked non-biaryl atropisomers — a frontier area with significant pharmaceutical relevance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are non-biaryl atropisomers and how do they differ from classical biaryl atropisomers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Classical biaryl atropisomers feature restricted rotation around a bond connecting two aromatic rings (e.g., BINAP, BINOL). Non-biaryl atropisomers, by contrast, arise from restricted rotation in systems where at least one of the bond partners is not an arene — such as aryl–heteroaryl, aryl–amide, or heteroatom-linked (aryl ether, aryl thioether) systems. These are synthetically more challenging to control stereochemically. Dr. Pandidurai Solai's current research focuses on a desymmetrization strategy using chiral phosphoric acid catalysts to access enantioenriched diaryl ether atropisomers bearing multiple stereoelements simultaneously."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is atroposelective synthesis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Atroposelective synthesis refers to the asymmetric construction of compounds possessing axial chirality — where stereoselectivity is achieved at a chiral axis rather than at a conventional tetrahedral carbon center. Achieving high atroselectivity requires catalysts that can differentiate between the two diastereotopic faces of a prochiral axis during bond formation. This is an active and challenging area of research bridging asymmetric catalysis, physical organic chemistry, and medicinal chemistry."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are domino (cascade) reactions in organic synthesis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Domino or cascade reactions are sequences of two or more mechanistically distinct transformations that occur in one pot, each triggered by the product or intermediate of the previous step, without isolation of intermediates. They dramatically improve atom economy, reduce waste, decrease step count, and increase molecular complexity efficiently. Dr. Pandidurai Solai has developed multiple organocatalytic domino sequences — including 1,3-dipolar cycloaddition/rearrangement, cycloaddition/ring-opening/C–S bond cleavage, and cycloaddition/ring-opening/C–N cleavage cascades — that construct complex polycyclic and heterocyclic frameworks in a single operation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a 1,3-dipolar cycloaddition reaction?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A 1,3-dipolar cycloaddition is a pericyclic reaction between a 1,3-dipole (a three-atom, four-electron component such as an azomethine ylide or carbonyl ylide) and a dipolarophile (an alkene or alkyne), forming a five-membered ring. It is one of the most powerful reactions for constructing nitrogen- and oxygen-containing heterocycles with multiple stereocenters in a single step. Dr. Pandidurai Solai employs formal 1,3-dipolar cycloadditions with benzothiazolium and thiazolium-derived ylides as the dipole component and organocatalytically activated α,β-unsaturated aldehydes as dipolarophiles to build complex pyrrolo-thiazine and dihydropyrrole scaffolds."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is chiral phosphoric acid (CPA) catalysis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Chiral phosphoric acids (CPAs), particularly BINOL-derived phosphoric acids, are powerful Brønsted acid organocatalysts that activate substrates through hydrogen bonding and proton transfer. They are widely used for enantioselective reactions including Mannich reactions, allylations, and desymmetrizations. Their bifunctional nature — acting as both acid and base — allows highly organized transition states. In Dr. Pandidurai Solai's postdoctoral research, CPA catalysts are employed for the enantioselective desymmetrization of prochiral diaryl ethers to control multiple elements of stereogenicity including axial chirality."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are pyrrolo-thiazines and what is their significance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pyrrolo-thiazines are bicyclic heterocyclic compounds containing both a pyrrole ring (nitrogen-containing five-membered ring) fused to a thiazine ring (sulfur- and nitrogen-containing six-membered ring). This scaffold is found in several biologically active natural products and synthetic pharmaceuticals exhibiting antimicrobial, antifungal, and antitumor activities. Dr. Pandidurai Solai developed the first organocatalytic enantioselective synthesis of pyrrolo-thiazine-2-carbaldehydes in excellent stereocontrol (>99% ee, >20:1 d.r.), published in Organic Letters (2024)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are 4,5-dihydropyrrole-3-carbaldehydes and why are they useful in synthesis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "4,5-Dihydropyrrole-3-carbaldehydes are partially saturated five-membered nitrogen heterocycles bearing an aldehyde handle that allows further functionalization. They are valuable synthetic intermediates for building pharmaceutical agents, alkaloid natural products, and chiral building blocks. Dr. Pandidurai Solai developed enantioselective organocatalytic routes to both N-phenyl thioether-tethered tetrasubstituted dihydropyrroles (Org. Biomol. Chem. 2024) and trisubstituted dihydropyrroles (Chem. Commun. 2025), achieving excellent stereochemical outcomes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is diphenylprolinol TMS ether and why is it used in organocatalysis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Diphenylprolinol trimethylsilyl ether (Jørgensen–Hayashi catalyst) is a benchmark chiral secondary amine organocatalyst derived from the amino acid proline. It activates α,β-unsaturated aldehydes through transient iminium ion formation, creating a chiral electrophilic intermediate. The bulky TMS-protected diaryl alcohol group creates a well-defined steric environment that controls facial selectivity during nucleophilic addition. Dr. Pandidurai Solai employs (R)-diphenylprolinol TMS ether as the primary chiral catalyst across multiple published methodologies, consistently achieving >96% enantiomeric excess."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are benzothiazolium salts and how are they used in cycloaddition chemistry?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Benzothiazolium salts are stable, bench-top-storable heterocyclic precursors that, upon treatment with base, generate reactive azomethine ylides — 1,3-dipolar species capable of undergoing cycloaddition with dipolarophiles. This strategy allows controlled generation of reactive intermediates under mild conditions. In Dr. Pandidurai Solai's work, benzothiazolium-derived azomethine ylides are trapped by organocatalytically activated iminium ions from α,β-unsaturated aldehydes to form pyrrolo-thiazine and dihydropyrrole frameworks stereoselectively."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is desymmetrization in asymmetric organic synthesis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Desymmetrization is a strategy in which a chiral catalyst selectively reacts with one of two enantiotopic (symmetry-related) groups, faces, or bonds in a symmetric prochiral substrate, converting it to a chiral, enantioenriched product. It is particularly powerful for setting multiple stereocenters simultaneously from achiral starting materials. Dr. Pandidurai Solai's current postdoctoral project applies enantioselective desymmetrization to access heteroatom-linked non-biaryl atropisomers using chiral phosphoric acid catalysis."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is cyclopropane chemistry and how is ring strain exploited in synthesis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cyclopropanes possess significant ring strain (~115 kJ/mol) due to forced 60° bond angles, making their C–C bonds electron-rich and readily activated by Lewis or Brønsted acids. Donor-acceptor (D-A) cyclopropanes, bearing both an electron-donating and an electron-withdrawing substituent, are particularly versatile building blocks: they undergo ring-opening, ring-expansion, and cycloaddition reactions to build five-, six-, and seven-membered carbocycles and heterocycles with excellent stereocontrol. This chemistry is a key research theme in Dr. Pandidurai Solai's expertise portfolio."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are palladium nanoparticles (Pd-BNP) and why are they used in catalysis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Binaphthyl-stabilized palladium nanoparticles (Pd-BNP) are heterogeneous catalysts in which palladium metal nanoparticles are stabilized by a BINAP-derived polymer scaffold. They combine the high activity of homogeneous palladium catalysts with the practical advantages of heterogeneous catalysts — namely easy recovery, recyclability (reusable over multiple cycles), and reduced metal contamination in products. Dr. Pandidurai Solai demonstrated their use in a one-pot Heck-like carbocyclization/nucleophilic addition for the stereoselective synthesis of 3-arylidene-2-oxindoles (J. Org. Chem. 2023)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the significance of enantiomeric excess (ee) and diastereomeric ratio (d.r.) in stereoselective synthesis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Enantiomeric excess (ee%) quantifies how much one enantiomer predominates over the other in a mixture: 99% ee means 99.5% of one form and 0.5% of the other. Diastereomeric ratio (d.r.) describes the relative proportion of diastereomers (non-mirror-image stereoisomers) in a product. In pharmaceutical synthesis, high ee (>95%) is typically required for regulatory approval, as the 'wrong' enantiomer can be inactive or toxic. Dr. Pandidurai Solai's methodologies routinely achieve >96–99% ee and >20:1 d.r., demonstrating exceptional catalyst-controlled stereocontrol."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does photochemistry enable new bond formations in organic synthesis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Photochemistry uses visible or UV light to excite molecules to high-energy electronic states, generating reactive radical, biradical, or ionic intermediates that are inaccessible by thermal pathways. Photoredox catalysis — using light-absorbing organic dyes or metal complexes — enables single-electron transfer to generate carbon radicals under mild conditions, facilitating C–C, C–N, and C–O bond formations with unique selectivity. This is an emerging frontier in Dr. Pandidurai Solai's research portfolio for accessing complex chiral molecules via radical-mediated pathways."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What role does electrochemistry play in modern organic synthesis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Electroorganic synthesis uses electrical current to drive oxidation or reduction reactions at electrode surfaces, replacing traditional chemical oxidants and reductants. This makes reactions greener, more controllable, and applicable to substrates that are incompatible with conventional reagents. Electrosynthesis can generate radical cations, anions, or neutral radicals for C–C and C–heteroatom bond formations under mild, scalable conditions. It represents one of the expanding research directions in Dr. Pandidurai Solai's extended research scope."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is biocatalysis and how does it compare with chemical organocatalysis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Biocatalysis uses biological macromolecules — primarily enzymes — as catalysts to perform synthetic transformations. Enzymes offer extraordinary substrate specificity and stereoselectivity under aqueous, mild conditions, and are entirely biodegradable. Compared to small-molecule organocatalysts, enzymes can be engineered via directed evolution for tailored selectivity. Dr. Pandidurai Solai's research vision includes the development of biocatalytic methods as a complementary strategy to chemical organocatalysis for sustainable, highly selective transformations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why are heterocyclic compounds important in medicinal chemistry and drug discovery?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Heterocyclic compounds — ring systems containing atoms other than carbon (N, O, S) — constitute the core structural motif of over 85% of all approved pharmaceuticals and biologically active natural products. Their heteroatoms confer specific hydrogen-bonding, dipole, and electronic properties that enable precise interactions with biological targets. Dr. Pandidurai Solai's research directly addresses the need for efficient, enantioselective routes to N- and S-containing heterocycles (pyrrolo-thiazines, dihydropyrroles, pyrroles, oxindoles) as potential pharmacophores and chiral building blocks for drug discovery."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is one-pot synthesis and what are its advantages in organic chemistry?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "One-pot synthesis refers to a reaction sequence in which all reagents and substrates are combined in a single vessel and transformed to the desired product without isolation of intermediates. Advantages include drastically reduced reaction time, fewer purification steps, lower solvent and reagent consumption, improved atom economy, and minimized environmental impact. Dr. Pandidurai Solai has developed several one-pot organocatalytic sequences involving cycloaddition/rearrangement/bond-cleavage cascades that deliver complex chiral heterocycles from simple, commercially available starting materials."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Heck reaction and what are Heck-like carbocyclizations?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Heck reaction is a palladium-catalysed coupling of an aryl or vinyl halide with an alkene via oxidative addition, migratory insertion, and β-hydride elimination, forming a new C–C bond. Heck-like intramolecular (carbocyclization) variants close rings to form carbocyclic or heterocyclic products. Dr. Pandidurai Solai demonstrated that binaphthyl-stabilized Pd nanoparticles can promote a one-pot intramolecular Heck-like carbocyclization followed by nucleophilic addition to give stereoselective 3-arylidene-2-oxindoles, showcasing the power of heterogeneous palladium catalysis."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is green chemistry and how is it integrated into Dr. Pandidurai Solai's research?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Green chemistry aims to design chemical products and processes that minimise hazardous substances, reduce waste, and improve energy efficiency — guided by the 12 Principles of Green Chemistry. Dr. Pandidurai Solai's research inherently aligns with green chemistry through: (1) transition metal-free organocatalysis that avoids toxic heavy metals; (2) domino and one-pot strategies that maximise atom economy; (3) use of recyclable heterogeneous palladium nanoparticle catalysts; and (4) mild reaction conditions (room temperature to 0 °C) with reduced energy input."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is dual amine/transition metal catalysis and what are its synthetic applications?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dual amine/transition metal catalysis combines the unique activation modes of chiral secondary amine organocatalysts (enamine/iminium activation) with transition metal catalysts (π-activation, oxidative addition) in a single reaction. This synergistic approach allows bond disconnections that are impossible by either catalyst class alone — for example, α-arylation, α-alkylarylation, and cross-coupling of carbonyl compounds using enamine intermediates. Dr. Pandidurai Solai co-authored a comprehensive review on this topic in the European Journal of Organic Chemistry (2022)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Dr. Pandidurai Solai open to research collaborations or academic positions?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Dr. Pandidurai Solai actively welcomes discussions on research collaborations, joint grant applications, academic or industrial opportunities, and scientific exchange. His expertise spans asymmetric organocatalysis, atroposelective synthesis, transition metal catalysis, and heterocyclic chemistry — making him a strong partner for projects in medicinal chemistry, total synthesis, process chemistry, and catalysis. He can be contacted directly at yespandiduraiiitm[at]gmail[dot]com or through LinkedIn and ORCID."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- 5. Service Schema — research services offered by Dr. Pandidurai Solai -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Synthetic Organic Chemistry Research & Collaboration",
-      "description": "Research services and academic collaborations offered by Dr. Pandidurai Solai: asymmetric organocatalysis, atroposelective synthesis, domino reactions, 1,3-dipolar cycloadditions, and heterocyclic compound synthesis. Open to joint projects with academic groups and pharmaceutical/agrochemical industry partners.",
-      "provider": {
-        "@type": "Person",
-        "name": "Dr. Pandidurai Solai",
-        "url": "https://yespandidurai.github.io",
-        "sameAs": [
-          "https://orcid.org/0000-0002-0167-1717",
-          "https://scholar.google.com/citations?user=fAdfZRQAAAAJ",
-          "https://twitter.com/Yespandidurai"
-        ],
-        "jobTitle": "Postdoctoral Research Fellow",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "iSm2, Aix-Marseille University",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Marseille",
-            "addressCountry": "FR"
-          }
-        }
-      },
-      "serviceType": [
-        "Asymmetric Organocatalysis",
-        "Atroposelective Synthesis",
-        "Domino & Cascade Reactions",
-        "1,3-Dipolar Cycloaddition",
-        "Heterocyclic Chemistry",
-        "Chiral Phosphoric Acid Catalysis",
-        "Research Collaboration",
-        "Scientific Consultation"
-      ],
-      "areaServed": {
-        "@type": "Place",
-        "name": "Worldwide"
-      },
-      "availableChannel": {
-        "@type": "ServiceChannel",
-        "serviceUrl": "https://yespandidurai.github.io/#contact",
-        "availableLanguage": ["English", "Tamil"]
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Research Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Academic Research Collaboration",
-              "description": "Joint research projects in asymmetric catalysis, atropisomer synthesis, and heterocyclic chemistry with academic institutions worldwide."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Industry Consultation — Chiral Synthesis",
-              "description": "Expert consultation for pharmaceutical and agrochemical companies on enantioselective synthesis routes, chiral catalyst selection, and stereochemical analysis."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Postdoctoral & Research Positions",
-              "description": "Open to postdoctoral fellowships, research scientist roles, and faculty positions in synthetic organic chemistry."
-            }
-          }
-        ]
-      }
-    }
-    </script>
-
-    <!-- Google Fonts — crossorigin is correctly set on fonts.gstatic.com preconnect -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Styles (unchanged from original — all design/layout preserved) -->
+    <!-- CSS Styles -->
     <style>
         :root {
             /* Color Palette */
@@ -715,6 +138,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            /* Ensures clicking a nav link doesn't hide the section title under the fixed header */
+            scroll-padding-top: 80px; 
         }
 
         body {
@@ -759,30 +188,11 @@
             color: var(--accent-blue-hover);
         }
 
-        /* --- SPA Routing Styles --- */
-        main > section {
-            display: none !important; /* Force hide all sections by default */
-        }
-
-        main > section.active-section {
-            display: block !important; /* Show active section */
-            animation: pageFadeIn 0.4s ease-out forwards;
-        }
-
-        /* The Hero section requires flexbox instead of block */
-        main > section#home.active-section {
-            display: flex !important;
-        }
-
+        /* Highlight active section in navigation */
         .nav-links a.active-nav {
             color: var(--accent-copper);
             border-bottom: 2px solid var(--accent-copper);
             padding-bottom: 2px;
-        }
-
-        @keyframes pageFadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Navigation */
@@ -818,7 +228,7 @@
             flex-direction: column;
             gap: 6px;
             cursor: pointer;
-            z-index: 1001; /* Ensure it stays above the mobile menu */
+            z-index: 1001; 
         }
 
         .hamburger span {
@@ -913,7 +323,6 @@
             padding-left: 2rem;
         }
 
-        /* Chevron Icon for Dropdown */
         .chevron-down {
             width: 14px;
             height: 14px;
@@ -926,6 +335,7 @@
 
         /* Hero Section */
         .hero {
+            display: flex;
             padding: 8rem 10% 8rem;
             min-height: 100vh;
             flex-direction: column;
@@ -936,7 +346,6 @@
             overflow: hidden;
         }
 
-        /* Top Banner for Molecules */
         .hero-molecules-banner {
             width: 100%;
             display: flex;
@@ -1031,7 +440,6 @@
             display: block;
         }
         
-        /* Hero Social Icons */
         .hero-socials {
             display: flex;
             gap: 1.2rem;
@@ -1686,18 +1094,20 @@
                 position: fixed;
                 top: 0;
                 right: -100%; /* Hidden off-screen initially */
-                width: 70%;
+                width: 250px; /* Fixed width so it never takes up the whole screen awkwardly */
                 height: 100vh;
                 background: rgba(11, 17, 32, 0.98);
+                display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start; /* Keeps items at the top so they aren't pushed off screen */
                 align-items: center;
                 transition: right 0.4s ease;
                 box-shadow: -10px 0 30px rgba(0,0,0,0.5);
                 margin: 0;
-                padding: 0;
+                padding: 100px 0 40px 0; /* Add padding at top to clear header */
                 z-index: 1000;
                 border-left: 1px solid rgba(255,255,255,0.05);
+                overflow-y: auto; /* Adds scrollbar if list of links is too long! */
             }
 
             .nav-links.nav-active {
@@ -1705,7 +1115,7 @@
             }
 
             .nav-links > li {
-                margin: 1.5rem 0;
+                margin: 1.2rem 0;
                 width: 100%;
                 text-align: center;
             }
@@ -1715,20 +1125,24 @@
                 justify-content: center;
             }
 
-            /* Adjust dropdown logic on mobile to display flat */
-            .nav-links li:hover .dropdown {
-                opacity: 1;
-                visibility: visible;
-                position: static;
-                transform: none;
-                background: transparent;
-                box-shadow: none;
-                border: none;
+            /* Display dropdown fully inline inside the mobile menu drawer */
+            .dropdown {
+                opacity: 1 !important;
+                visibility: visible !important;
+                position: static !important;
+                transform: none !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                border: none !important;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding: 0;
                 margin-top: 10px;
+            }
+
+            .nav-links li:hover .dropdown {
+                transform: none !important;
             }
 
             .dropdown a {
@@ -1809,7 +1223,6 @@
             .footer-design { justify-content: center; }
             .hero-molecules-banner img { max-width: 45%; height: 90px; }
             .theme-diagram-wrapper { grid-template-columns: 1fr; }
-            .nav-links { width: 85%; } /* Make menu slightly wider on very small screens */
         }
     </style>
 </head>
@@ -1888,9 +1301,6 @@
                             <img src="assets/images/pandi.jpeg" alt="Dr. Pandidurai Solai">
                         </div>
                     </div>
-                    <!-- [SECURITY FIX #5] All social icon hrefs are now constructed
-                         by JS (see script at bottom) to prevent email harvesting.
-                         The data-email-* attributes hold encoded parts. -->
                     <div class="hero-socials">
                         <!-- Email — href injected by JS -->
                         <a id="hero-email-link" href="#" aria-label="Email">
@@ -1928,7 +1338,7 @@
                 </div>
                 <div class="card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;">
                     <div class="cover-placeholder" style="width: 100%; max-width: 250px; height: 320px;">
-                        <img src="assets/images/thesiscover.png" alt="Ph.D. Thesis Cover">
+                        <img src="assets/images/thesiscover.png" alt="Ph.D. Thesis Cover" onerror="this.style.display='none'">
                     </div>
                     <div class="pub-actions" style="margin-top: 0; justify-content: center;">
                         <a href="assets/images/thesiscover.svg" target="_blank" rel="noopener noreferrer" class="btn-journal">
@@ -2732,14 +2142,7 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════
-             FAQ SECTION
-             25 expert Q&A grouped in 5 research-relevant categories.
-             Each item is a native <details>-free accordion for full
-             keyboard accessibility and smooth animation control.
-        <!-- [SECURITY FIX #5] Email addresses are now injected by JavaScript (see
-             script below) to prevent email harvesting by bots scanning raw HTML.
-             The displayed text and href are assembled from encoded parts at runtime. -->
+        <!-- CONTACT / FAQ -->
         <section id="contact" style="background-color: var(--bg-surface-light); padding: 5rem 10%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
             <div style="max-width: 800px; margin: 0 auto;">
                 <h2>Get In Touch</h2>
@@ -2773,7 +2176,6 @@
         
         <div class="footer-design">
             Web Design: Dr. Hariprasad Narayanan
-            <!-- [SECURITY FIX #5] Footer designer email also injected by JS -->
             <a id="footer-designer-email" href="#" title="Email Designer" style="color: var(--text-secondary); display: inline-flex; transition: var(--transition);">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </a>
@@ -2783,74 +2185,14 @@
         </div>
     </footer>
 
-    <!-- Image Modal (Lightbox) — unchanged from original -->
+    <!-- Image Modal (Lightbox) -->
     <div id="imageModal" class="modal">
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="expandedImg" alt="Expanded view">
     </div>
 
-    <!-- ================================================================
-         SECURITY-HARDENED JAVASCRIPT
-         Changes from original:
-         [FIX #5] Email anti-harvesting: addresses assembled at runtime
-                  from encoded parts — invisible to simple HTML scrapers.
-         [FIX #6] diagram icon: uses cloneNode(true) instead of
-                  innerHTML = outerHTML, eliminating the innerHTML XSS
-                  vector entirely.
-    ================================================================ -->
+    <!-- JAVASCRIPT -->
     <script>
-        // ---------------------------------------------------------------
-        // SPA Hash Router (Tabbed Navigation)
-        // ---------------------------------------------------------------
-        function handleRouting() {
-            // Get the current hash, default to home
-            var hash = window.location.hash || '#home';
-            
-            // 1. Hide all sections & remove active classes
-            var sections = document.querySelectorAll('main > section');
-            sections.forEach(function(sec) {
-                sec.classList.remove('active-section');
-            });
-            
-            // 2. Show target section
-            var targetSection = document.querySelector(hash);
-            if (targetSection && targetSection.tagName.toLowerCase() === 'section') {
-                targetSection.classList.add('active-section');
-                window.scrollTo(0, 0); // Jump to top of the new "page"
-            } else {
-                // Fallback if hash is invalid
-                document.getElementById('home').classList.add('active-section');
-                history.replaceState(null, null, '#home');
-                hash = '#home';
-            }
-
-            // 3. Update Navigation Links Highlighting
-            var navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(function(link) {
-                link.classList.remove('active-nav');
-                // Highlight link if it matches current hash
-                if (link.getAttribute('href') === hash) {
-                    link.classList.add('active-nav');
-                    
-                    // If it's a dropdown item, also highlight the parent menu item
-                    var parentDropdown = link.closest('.dropdown');
-                    if (parentDropdown) {
-                        var parentLink = parentDropdown.previousElementSibling;
-                        if (parentLink && parentLink.tagName.toLowerCase() === 'a') {
-                            parentLink.classList.add('active-nav');
-                        }
-                    }
-                }
-            });
-        }
-
-        // Listen for URL hash changes (when user clicks nav links or uses back/forward buttons)
-        window.addEventListener('hashchange', handleRouting);
-
-        // ---------------------------------------------------------------
-        // [FIX #5] Anti-harvesting email assembly
-        // Emails are split and ROT13'd so no plain address exists in source.
-        // ---------------------------------------------------------------
         (function () {
             // Simple decode helper — reverses a basic split encoding
             function decode(parts) {
@@ -2885,13 +2227,59 @@
             if (fde) { fde.href = 'mailto:' + e3; }
         })();
 
-        // ---------------------------------------------------------------
-        // Modal / Lightbox
-        // ---------------------------------------------------------------
         document.addEventListener('DOMContentLoaded', function () {
-            // Run the router immediately on page load
-            handleRouting();
+            
+            // --- Mobile Menu Drawer Logic ---
+            var hamburger = document.getElementById('hamburger');
+            var navLinksContainer = document.querySelector('.nav-links');
+            var navItems = document.querySelectorAll('.nav-links a');
 
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    navLinksContainer.classList.toggle('nav-active');
+                    hamburger.classList.toggle('toggle');
+                });
+            }
+
+            // Close mobile menu whenever a link is clicked
+            navItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    if (navLinksContainer.classList.contains('nav-active')) {
+                        navLinksContainer.classList.remove('nav-active');
+                        hamburger.classList.remove('toggle');
+                    }
+                });
+            });
+
+            // --- Scroll Spy for Active Nav Highlight ---
+            var sections = document.querySelectorAll('main > section');
+            window.addEventListener('scroll', function() {
+                var current = '';
+                sections.forEach(function(section) {
+                    var sectionTop = section.offsetTop;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navItems.forEach(function(link) {
+                    link.classList.remove('active-nav');
+                    if (current && link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active-nav');
+                        
+                        // Also highlight parent if it's a dropdown item
+                        var parentDropdown = link.closest('.dropdown');
+                        if (parentDropdown) {
+                            var parentLink = parentDropdown.previousElementSibling;
+                            if (parentLink && parentLink.tagName.toLowerCase() === 'a') {
+                                parentLink.classList.add('active-nav');
+                            }
+                        }
+                    }
+                });
+            });
+
+            // --- Image Modal Logic ---
             var modal    = document.getElementById('imageModal');
             var modalImg = document.getElementById('expandedImg');
             var closeBtn = document.getElementsByClassName('close-modal')[0];
@@ -2929,11 +2317,7 @@
                 if (e.target !== modalImg) { modal.style.display = 'none'; }
             };
 
-            // ---------------------------------------------------------------
-            // Interactive Diagram
-            // [FIX #9] Replaced innerHTML = outerHTML with cloneNode(true)
-            //          to eliminate the innerHTML XSS vector.
-            // ---------------------------------------------------------------
+            // --- Interactive Diagram ---
             var diagramNodes        = document.querySelectorAll('.diagram-node');
             var centerTitle         = document.getElementById('center-title');
             var centerDesc          = document.getElementById('center-desc');
@@ -2942,7 +2326,6 @@
             var defaultTitle = 'Core Expertise';
             var defaultDesc  = 'Hover over any node in the network to view a detailed breakdown of the research theme.';
 
-            // Store the original default icon node for safe restoration via cloneNode
             var defaultIconNode = centerIconContainer.querySelector('svg');
             var defaultIconClone = defaultIconNode ? defaultIconNode.cloneNode(true) : null;
 
@@ -2963,7 +2346,6 @@
                 node.addEventListener('mouseenter', function () {
                     var title   = node.getAttribute('data-title');
                     var desc    = node.getAttribute('data-desc');
-                    // [FIX #9] Clone the SVG from the node — no innerHTML needed
                     var srcSvg  = node.querySelector('svg');
 
                     setOpacity(centerTitle, 0);
@@ -2971,11 +2353,9 @@
                     setOpacity(centerIconContainer, 0);
 
                     setTimeout(function () {
-                        // Safe: use textContent for plain text, not innerHTML
                         centerTitle.textContent = title;
                         centerDesc.textContent  = desc;
 
-                        // Safe: cloneNode instead of outerHTML/innerHTML
                         if (srcSvg) {
                             var cloned = srcSvg.cloneNode(true);
                             while (centerIconContainer.firstChild) {
@@ -3003,7 +2383,6 @@
                         centerTitle.textContent = defaultTitle;
                         centerDesc.textContent  = defaultDesc;
 
-                        // Restore default icon via cloneNode — no innerHTML
                         if (defaultIconClone) {
                             var restored = defaultIconClone.cloneNode(true);
                             while (centerIconContainer.firstChild) {
