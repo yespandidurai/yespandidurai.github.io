@@ -140,12 +140,6 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-            /* Ensures clicking a nav link doesn't hide the section title under the fixed header */
-            scroll-padding-top: 80px; 
-        }
-
         body {
             font-family: var(--font-sans);
             background-color: var(--bg-deep-navy);
@@ -186,6 +180,26 @@
 
         a:hover {
             color: var(--accent-blue-hover);
+        }
+
+        /* --- SPA Routing Styles --- */
+        main > section {
+            display: none !important; /* Force hide all sections by default */
+        }
+
+        main > section.active-section {
+            display: block !important; /* Show active section */
+            animation: pageFadeIn 0.4s ease-out forwards;
+        }
+
+        /* The Hero section requires flexbox instead of block */
+        main > section#home.active-section {
+            display: flex !important;
+        }
+
+        @keyframes pageFadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Highlight active section in navigation */
@@ -2251,20 +2265,29 @@
                 });
             });
 
-            // --- Scroll Spy for Active Nav Highlight ---
-            var sections = document.querySelectorAll('main > section');
-            window.addEventListener('scroll', function() {
-                var current = '';
-                sections.forEach(function(section) {
-                    var sectionTop = section.offsetTop;
-                    if (pageYOffset >= (sectionTop - 150)) {
-                        current = section.getAttribute('id');
-                    }
+            // --- SPA Hash Router (Tabbed Navigation) ---
+            function handleRouting() {
+                var hash = window.location.hash || '#home';
+                var sections = document.querySelectorAll('main > section');
+                
+                sections.forEach(function(sec) {
+                    sec.classList.remove('active-section');
                 });
+                
+                var targetSection = document.querySelector(hash);
+                if (targetSection && targetSection.tagName.toLowerCase() === 'section') {
+                    targetSection.classList.add('active-section');
+                    window.scrollTo(0, 0); // Jump to top of the new "page"
+                } else {
+                    // Fallback if hash is invalid
+                    document.getElementById('home').classList.add('active-section');
+                    history.replaceState(null, null, '#home');
+                    hash = '#home';
+                }
 
                 navItems.forEach(function(link) {
                     link.classList.remove('active-nav');
-                    if (current && link.getAttribute('href') === '#' + current) {
+                    if (link.getAttribute('href') === hash) {
                         link.classList.add('active-nav');
                         
                         // Also highlight parent if it's a dropdown item
@@ -2277,7 +2300,10 @@
                         }
                     }
                 });
-            });
+            }
+
+            window.addEventListener('hashchange', handleRouting);
+            handleRouting(); // Initialize on load
 
             // --- Image Modal Logic ---
             var modal    = document.getElementById('imageModal');
@@ -2404,4 +2430,3 @@
     </script>
 </body>
 </html>
-
