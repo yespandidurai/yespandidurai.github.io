@@ -6,6 +6,9 @@
     
     <!-- ============================================================
          SECURITY HEADERS
+         Optimized for Static Hosting (e.g., GitHub Pages).
+         Safely permits necessary inline styles/scripts for a single-file
+         app while strictly blocking external unauthorized resources.
     ============================================================ -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
@@ -21,8 +24,10 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="
         camera=(), microphone=(), geolocation=(), payment=(), usb=(),
-        magnetometer=(), accelerometer=(), gyroscope=()
+        magnetometer=(), accelerometer=(), gyroscope=(), display-capture=(),
+        browsing-topics=()
     ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 
     <!-- ============================================================
          PROFESSIONAL SEO OPTIMIZATION
@@ -128,8 +133,8 @@
             --font-serif: 'Playfair Display', serif;
             --font-sans: 'Inter', sans-serif;
             
-            /* Spacing & Layout */
-            --section-padding: 5rem 10%;
+            /* Spacing & Layout - Fluid for all screens */
+            --section-padding: clamp(3rem, 6vh, 5rem) clamp(5%, 8vw, 10%);
             --border-radius: 8px;
             --transition: all 0.3s ease;
         }
@@ -148,6 +153,7 @@
             overflow-x: hidden;
         }
 
+        /* Fluid Headers */
         h1, h2, h3, h4 {
             font-family: var(--font-serif);
             font-weight: 600;
@@ -156,13 +162,13 @@
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 4vw, 2.5rem);
             margin-bottom: 1rem;
             color: var(--accent-copper);
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
             margin-bottom: 0.5rem;
             color: var(--text-primary);
         }
@@ -181,6 +187,44 @@
         a:hover {
             color: var(--accent-blue-hover);
         }
+
+        /* CSP Compliance: Utility Classes replacing inline styles */
+        .d-none { display: none !important; }
+        .bg-surface-light-section { background-color: var(--bg-surface-light); }
+        .hero-desc { max-width: 600px; margin-bottom: 2rem; }
+        .thesis-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; }
+        .thesis-cover { width: 100%; max-width: 250px; height: 320px; }
+        .pub-actions-center { margin-top: 0; justify-content: center; }
+        .mt-2rem { margin-top: 2rem; }
+        .mb-2rem { margin-bottom: 2rem; }
+        .mb-05rem { margin-bottom: 0.5rem; }
+        .mt-08rem { margin-top: 0.8rem; }
+        .vision-list { padding-left: 1.5rem; color: var(--text-secondary); margin-top: 1rem; }
+        .section-subtitle { max-width: 800px; margin-bottom: 3rem; }
+        .summary-subtitle { font-style: italic; color: var(--text-secondary); margin-bottom: 2.5rem; }
+        .section-padded-margin { background-color: var(--bg-surface-light); padding: 4rem 10%; margin: 4rem 0; }
+        .container-xl { max-width: 1400px; margin: 0 auto; }
+        .expertise-heading { color: var(--accent-copper); font-size: 1.2rem; display: flex; align-items: center; gap: 8px; }
+        .expertise-list { list-style: none; padding-left: 0; color: var(--text-secondary); margin-top: 1rem; }
+        .expertise-item { margin-bottom: 0.5rem; display: flex; gap: 8px; }
+        .flex-center { display: flex; align-items: center; justify-content: center; }
+        .glovebox-img-wrapper { width: 100%; max-width: 450px; height: 350px; }
+        .obj-cover { object-fit: cover; }
+        .text-copper { color: var(--accent-copper); }
+        .achievement-list { list-style: none; color: var(--text-secondary); }
+        .achievement-item { margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 15px; }
+        .icon-shrink { flex-shrink: 0; margin-top: 2px; }
+        .achievement-title { color: var(--text-primary); font-size: 1.1rem; }
+        .certificate-wrapper { width: 100%; max-width: 450px; height: auto; min-height: 300px; padding: 10px; }
+        .timeline-title { font-size: 1.2rem; color: var(--text-primary); }
+        .pub-actions-sm { margin-top: 0.8rem; }
+        .section-contact { background-color: var(--bg-surface-light); padding: 5rem 10%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+        .contact-container { max-width: 800px; margin: 0 auto; }
+        .contact-desc { margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-secondary); }
+        .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+        .contact-btn { display: flex; align-items: center; gap: 10px; }
+        .contact-address { margin-top: 3rem; color: var(--text-secondary); }
+        .footer-icon { color: var(--text-secondary); display: inline-flex; transition: var(--transition); }
 
         /* --- SPA Routing Styles --- */
         main > section {
@@ -224,14 +268,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 4%; /* Increased horizontal space for large screens */
+            padding: 1rem clamp(4%, 6vw, 10%); /* Fluid padding for ultra-wide monitors */
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .logo {
             font-family: var(--font-serif);
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
             font-weight: 700;
             color: var(--accent-copper);
         }
@@ -268,7 +312,7 @@
 
         .nav-links {
             display: flex;
-            gap: 1.2rem; /* Reduced from 2rem to fit more items naturally */
+            gap: clamp(0.5rem, 1.5vw, 2rem); /* Fluid gaps for desktop */
             list-style: none;
             align-items: center;
         }
@@ -279,7 +323,7 @@
 
         .nav-links a {
             color: var(--text-primary);
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
             text-transform: uppercase;
             letter-spacing: 1px;
             display: flex;
@@ -350,7 +394,7 @@
         /* Hero Section */
         .hero {
             display: flex;
-            padding: 8rem 10% 8rem;
+            padding: 8rem clamp(5%, 8vw, 10%) 8rem;
             min-height: 100vh;
             flex-direction: column;
             justify-content: center;
@@ -373,9 +417,9 @@
         }
 
         .hero-molecules-banner img {
-            height: 180px;
+            height: clamp(60px, 12vh, 180px);
             width: auto;
-            max-width: 16%;
+            max-width: clamp(35px, 12%, 180px); /* Fluid size */
             object-fit: contain;
             filter: invert(1) brightness(1.2);
             mix-blend-mode: screen;
@@ -401,7 +445,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 4rem;
+            gap: clamp(2rem, 5vw, 4rem);
             width: 100%;
             z-index: 1; 
             position: relative;
@@ -413,7 +457,7 @@
         }
 
         .hero-image {
-            flex: 0 0 320px;
+            flex: 0 0 clamp(260px, 30vw, 320px);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -428,8 +472,8 @@
         }
 
         .hexagon-border {
-            width: 320px;
-            height: 350px;
+            width: clamp(240px, 30vw, 320px);
+            height: clamp(260px, 33vw, 350px);
             background: linear-gradient(135deg, var(--accent-copper), var(--accent-blue));
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             display: flex;
@@ -475,12 +519,12 @@
         }
 
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
             margin-bottom: 1rem;
         }
 
         .tagline {
-            font-size: 1.5rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
             color: var(--accent-copper);
             font-weight: 300;
             margin-bottom: 2rem;
@@ -492,14 +536,14 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.1rem;
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
             color: var(--text-secondary);
             margin-bottom: 1rem;
         }
 
         .hero-achievements {
             margin-bottom: 3rem;
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
             color: var(--accent-copper-light);
             display: flex;
             align-items: center;
@@ -531,21 +575,21 @@
 
         .grid-2 {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
+            gap: clamp(2rem, 5vw, 4rem);
             text-align: justify;
         }
 
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
             gap: 2rem;
         }
 
         /* Cards */
         .card {
             background: var(--bg-surface);
-            padding: 2rem;
+            padding: clamp(1.5rem, 4vw, 2rem);
             border-radius: var(--border-radius);
             border: 1px solid rgba(255,255,255,0.05);
             transition: var(--transition);
@@ -567,7 +611,7 @@
             position: relative;
             width: 100%;
             max-width: 800px;
-            height: 700px;
+            height: clamp(500px, 70vh, 700px);
             margin: 0 auto;
         }
         
@@ -586,8 +630,8 @@
             top: 50%; 
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 280px; 
-            height: 280px;
+            width: clamp(200px, 35vw, 280px); 
+            height: clamp(200px, 35vw, 280px);
             background: var(--bg-deep-navy);
             border: 2px solid var(--accent-copper);
             border-radius: 50%;
@@ -596,37 +640,37 @@
             align-items: center; 
             justify-content: center;
             text-align: center;
-            padding: 2rem;
+            padding: clamp(1rem, 3vw, 2rem);
             z-index: 2;
             box-shadow: 0 0 40px rgba(184, 115, 51, 0.15);
             transition: all 0.4s ease;
         }
 
         .diagram-center svg {
-            width: 40px;
-            height: 40px;
+            width: clamp(25px, 5vw, 40px);
+            height: clamp(25px, 5vw, 40px);
             stroke: var(--accent-copper);
             margin-bottom: 15px;
             transition: all 0.4s ease;
         }
 
         .diagram-center h3 {
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
             color: var(--accent-blue);
             margin-bottom: 0.5rem;
             transition: all 0.4s ease;
         }
 
         .diagram-center p {
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 1vw, 0.85rem);
             line-height: 1.5;
             margin: 0;
         }
         
         .diagram-node {
             position: absolute;
-            width: 140px; 
-            height: 140px;
+            width: clamp(100px, 15vw, 140px); 
+            height: clamp(100px, 15vw, 140px);
             background: var(--bg-surface);
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 50%;
@@ -635,7 +679,7 @@
             align-items: center; 
             justify-content: center;
             text-align: center;
-            padding: 1rem;
+            padding: clamp(0.5rem, 1vw, 1rem);
             z-index: 3;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
@@ -651,8 +695,8 @@
         }
         
         .diagram-node svg { 
-            width: 30px; 
-            height: 30px; 
+            width: clamp(20px, 3vw, 30px); 
+            height: clamp(20px, 3vw, 30px); 
             stroke: var(--accent-copper); 
             margin-bottom: 8px; 
             transition: stroke 0.3s; 
@@ -663,7 +707,7 @@
         }
         
         .diagram-node span { 
-            font-size: 0.8rem; 
+            font-size: clamp(0.65rem, 1vw, 0.8rem); 
             font-weight: 600; 
             line-height: 1.3; 
             color: var(--text-primary);
@@ -685,13 +729,13 @@
             background: var(--bg-surface);
             border-radius: var(--border-radius);
             border: 1px solid rgba(255,255,255,0.05);
-            padding: 3rem;
+            padding: clamp(1.5rem, 4vw, 3rem);
             margin-bottom: 3rem;
         }
 
         .summary-section h3 {
             color: var(--accent-copper);
-            font-size: 1.8rem;
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
             margin-bottom: 1.5rem;
             border-bottom: 1px solid rgba(255,255,255,0.1);
             padding-bottom: 0.5rem;
@@ -706,7 +750,7 @@
         }
 
         .summary-text {
-            font-size: 1.05rem;
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
             color: var(--text-primary);
             margin-bottom: 1.5rem;
             line-height: 1.7;
@@ -753,7 +797,7 @@
         /* Figure Caption Styles */
         .figure-caption {
             text-align: center;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
             margin-top: 0.8rem;
             color: var(--text-secondary);
             font-style: italic;
@@ -777,19 +821,20 @@
             padding: 2.5rem 0;
             border-bottom: 1px solid rgba(255,255,255,0.1);
             display: flex;
-            gap: 2.5rem;
+            gap: clamp(1.5rem, 3vw, 2.5rem);
             align-items: flex-start;
             justify-content: space-between;
         }
 
         .pub-cover {
-            flex: 0 0 140px;
+            flex: 0 0 clamp(100px, 15vw, 140px);
             max-width: 100%;
         }
 
         .cover-placeholder {
             width: 100%;
-            height: 180px;
+            height: auto;
+            aspect-ratio: 3/4;
             background: rgba(255,255,255,0.02);
             border: 1px solid rgba(184, 115, 51, 0.3);
             border-radius: var(--border-radius);
@@ -900,9 +945,9 @@
         .close-modal {
             position: absolute;
             top: 20px;
-            right: 40px;
+            right: clamp(15px, 4vw, 40px);
             color: var(--text-secondary);
-            font-size: 40px;
+            font-size: clamp(30px, 5vw, 40px);
             font-weight: bold;
             cursor: pointer;
             transition: var(--transition);
@@ -913,7 +958,7 @@
         }
 
         .pub-title {
-            font-size: 1.2rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.2rem);
             color: var(--text-primary);
             font-weight: 600;
             margin-bottom: 0.3rem;
@@ -921,7 +966,7 @@
 
         .pub-authors {
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
         }
 
         .pub-authors strong {
@@ -931,17 +976,18 @@
         .pub-journal {
             font-style: italic;
             color: var(--accent-copper);
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
         }
 
         .pub-links {
             margin-top: 0.5rem;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
         }
 
         /* Journal Action Buttons */
         .pub-actions {
             display: flex;
-            gap: 1rem;
+            gap: clamp(0.5rem, 1.5vw, 1rem);
             margin-top: 1rem;
             flex-wrap: wrap;
         }
@@ -951,7 +997,7 @@
             align-items: center;
             gap: 6px;
             padding: 0.4rem 0.8rem;
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 1.5vw, 0.85rem);
             font-weight: 600;
             color: var(--text-primary);
             background-color: var(--bg-surface-light);
@@ -970,7 +1016,7 @@
         /* Timeline */
         .timeline {
             border-left: 2px solid var(--accent-blue);
-            padding-left: 2rem;
+            padding-left: clamp(1rem, 3vw, 2rem);
             margin-left: 1rem;
         }
 
@@ -982,7 +1028,7 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -2.4rem;
+            left: calc(clamp(-1rem, -3vw, -2rem) - 7px);
             top: 0.4rem;
             width: 12px;
             height: 12px;
@@ -992,14 +1038,14 @@
         }
 
         .timeline-date {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
             color: var(--accent-blue);
             font-weight: 600;
             margin-bottom: 0.2rem;
         }
 
         .group-link {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
             display: inline-flex;
             align-items: center;
             gap: 5px;
@@ -1015,8 +1061,8 @@
         /* Conference Photo Grid */
         .conference-layout {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+            gap: clamp(2rem, 5vw, 4rem);
             margin-top: 2rem;
         }
         
@@ -1052,7 +1098,7 @@
             padding: 0.8rem;
             background: var(--bg-surface);
             border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 1.5vw, 0.85rem);
             color: var(--text-secondary);
             text-align: center;
         }
@@ -1062,7 +1108,7 @@
             background: #060A14;
             padding: 3rem 10% 1.5rem;
             border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 1.5vw, 0.85rem);
             color: var(--text-secondary);
             display: flex;
             flex-direction: column;
@@ -1080,7 +1126,7 @@
 
         .footer-design {
             text-align: center;
-            font-size: 0.75rem;
+            font-size: clamp(0.65rem, 1.2vw, 0.75rem);
             margin-top: 0.2rem;
             width: 100%;
             opacity: 0.7;
@@ -1096,73 +1142,47 @@
             color: var(--accent-copper) !important;
         }
 
-        /* Responsive Design */
+        /* -------------------------------------------------------------
+           FLUID & ADAPTIVE RESPONSIVE DESIGN
+           Optimized automatically for Ultra-Wide, Desktop, Laptop, Tablet & Mobile
+           ------------------------------------------------------------- */
         
-        /* --- Mid-Sized & Compact Laptops (11" to 13" screens) --- */
-        @media (max-width: 1300px) {
-            nav {
-                padding: 1rem 2%;
-            }
-            .nav-links {
-                gap: 0.7rem;
-            }
-            .nav-links a {
-                font-size: 0.8rem;
-                letter-spacing: 0.5px;
-            }
-            .logo {
-                font-size: 1.1rem;
-            }
-            .dropdown a {
-                font-size: 0.85rem;
-                padding: 0.6rem 1rem;
-            }
-        }
-
-        /* --- Tablets & Mobile --- */
-        @media (max-width: 1050px) {
-            /* Navbar Overrides for Mobile */
+        /* --- Small Laptops & Large Tablets (<= 1150px) --- */
+        @media (max-width: 1150px) {
             .hamburger {
-                display: flex; /* Show Hamburger Icon */
+                display: flex; 
             }
-
             .nav-links {
-                /* Side Drawer Menu for Mobile */
                 position: fixed;
                 top: 0;
-                right: -100%; /* Hidden off-screen initially */
-                width: 250px; /* Fixed width so it never takes up the whole screen awkwardly */
+                right: -100%;
+                width: clamp(250px, 40vw, 300px);
                 height: 100vh;
                 background: rgba(11, 17, 32, 0.98);
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start; /* Keeps items at the top so they aren't pushed off screen */
+                justify-content: flex-start;
                 align-items: center;
-                transition: right 0.4s ease;
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                 box-shadow: -10px 0 30px rgba(0,0,0,0.5);
                 margin: 0;
-                padding: 100px 0 40px 0; /* Add padding at top to clear header */
+                padding: 100px 0 40px 0;
                 z-index: 1000;
                 border-left: 1px solid rgba(255,255,255,0.05);
-                overflow-y: auto; /* Adds scrollbar if list of links is too long! */
+                overflow-y: auto;
             }
-
             .nav-links.nav-active {
-                right: 0; /* Slide in menu */
+                right: 0;
             }
-
             .nav-links > li {
                 margin: 1.2rem 0;
                 width: 100%;
                 text-align: center;
             }
-
             .nav-links a {
                 font-size: 1.1rem;
                 justify-content: center;
             }
-
-            /* Display dropdown fully inline inside the mobile menu drawer */
             .dropdown {
                 opacity: 1 !important;
                 visibility: visible !important;
@@ -1177,32 +1197,22 @@
                 padding: 0;
                 margin-top: 10px;
             }
-
             .nav-links li:hover .dropdown {
                 transform: none !important;
             }
-
             .dropdown a {
                 padding: 0.5rem;
                 color: var(--text-secondary);
                 font-size: 1rem;
             }
-
             .dropdown a:hover {
                 background: transparent;
                 padding-left: 0.5rem;
             }
+        }
 
-            /* Rest of existing Mobile Overrides */
-            .hero-molecules-banner {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1.5rem;
-            }
-            .hero-molecules-banner img {
-                max-width: 30%;
-                height: 120px;
-            }
+        /* --- Tablets & Standard Screens (<= 992px) --- */
+        @media (max-width: 992px) {
             .hero-container {
                 flex-direction: column-reverse;
                 text-align: center;
@@ -1213,21 +1223,13 @@
                 flex-direction: column;
                 align-items: center;
             }
-            .affiliation, .hero-achievements {
-                justify-content: center;
-            }
-            .hexagon-border {
-                width: 250px;
-                height: 275px;
-            }
-            .conference-layout {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            .affiliation, .hero-achievements { justify-content: center; }
+            
+            /* Flatten Interactive Diagram to elegant grid */
             .theme-diagram-wrapper {
                 height: auto;
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
                 gap: 1.5rem;
             }
             .diagram-lines, .diagram-center { display: none; }
@@ -1241,25 +1243,39 @@
                 aspect-ratio: auto;
             }
             .diagram-node.active { transform: translateY(-5px) !important; }
-            .diagram-node span { font-size: 1rem; }
+            .diagram-node span { font-size: 1.1rem; }
             .node-mobile-desc {
                 display: block;
                 margin-top: 0.8rem;
-                font-size: 0.85rem;
+                font-size: 0.9rem;
                 color: var(--text-secondary);
                 text-align: center;
             }
         }
 
+        /* --- Mobile Phones (<= 768px) --- */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .grid-2 { grid-template-columns: 1fr; }
-            .publication { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-            .pub-cover { width: 120px; }
+            .hero-molecules-banner { 
+                flex-wrap: wrap; 
+                justify-content: center; 
+                gap: 1rem; 
+            }
+            .publication { 
+                flex-direction: column; 
+                align-items: flex-start; 
+                gap: 1.5rem; 
+            }
+            .pub-cover { width: clamp(100px, 30vw, 140px); }
             .toc-placeholder { width: 100%; }
-            .footer-design { justify-content: center; }
-            .hero-molecules-banner img { max-width: 45%; height: 90px; }
-            .theme-diagram-wrapper { grid-template-columns: 1fr; }
+            .footer-design { flex-direction: column; gap: 8px; }
+        }
+
+        /* --- Small Mobile Phones (<= 480px) --- */
+        @media (max-width: 480px) {
+            .btn { width: 100%; text-align: center; } /* Full width buttons */
+            .pub-actions { flex-direction: column; width: 100%; }
+            .btn-journal { justify-content: center; width: 100%; }
+            .hero-molecules-banner { display: none; } /* Hide decorative banner to save space */
         }
     </style>
 </head>
@@ -1306,12 +1322,12 @@
         <!-- HERO SECTION -->
         <section class="hero" id="home">
             <div class="hero-molecules-banner">
-                <img src="assets/images/mol11.svg" alt="Synthesized Molecule 1">
-                <img src="assets/images/mol12.svg" alt="Synthesized Molecule 2">
-                <img src="assets/images/mol13.svg" alt="Synthesized Molecule 3">
-                <img src="assets/images/mol14.svg" alt="Synthesized Molecule 4">
-                <img src="assets/images/mol15.svg" alt="Synthesized Molecule 5">
-                <img src="assets/images/mol16.svg" alt="Synthesized Molecule 6">
+                <img src="assets/images/mol11.svg" alt="Synthesized Molecule 1" onerror="this.style.display='none'">
+                <img src="assets/images/mol12.svg" alt="Synthesized Molecule 2" onerror="this.style.display='none'">
+                <img src="assets/images/mol13.svg" alt="Synthesized Molecule 3" onerror="this.style.display='none'">
+                <img src="assets/images/mol14.svg" alt="Synthesized Molecule 4" onerror="this.style.display='none'">
+                <img src="assets/images/mol15.svg" alt="Synthesized Molecule 5" onerror="this.style.display='none'">
+                <img src="assets/images/mol16.svg" alt="Synthesized Molecule 6" onerror="this.style.display='none'">
             </div>
             <div class="hero-container">
                 <div class="hero-content">
@@ -1327,7 +1343,7 @@
                         Seal of Excellence, MSCA Postdoctoral Fellowship 2025
                     </div>
 
-                    <p style="max-width: 600px; margin-bottom: 2rem;">
+                    <p class="hero-desc">
                         My research focuses on developing innovative catalytic methodologies, leveraging asymmetric organocatalysis, small-ring transformations, and transition-metal catalysis to solve pressing challenges in synthetic organic chemistry.
                     </p>
                 </div>
@@ -1335,27 +1351,22 @@
                 <div class="hero-image">
                     <div class="hexagon-border">
                         <div class="image-placeholder">
-                            <img src="assets/images/pandi.jpeg" alt="Dr. Pandidurai Solai">
+                            <img src="assets/images/pandi.jpeg" alt="Dr. Pandidurai Solai" onerror="this.style.display='none'">
                         </div>
                     </div>
                     <div class="hero-socials">
-                        <!-- Email — href injected by JS -->
                         <a id="hero-email-link" href="#" aria-label="Email">
                             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         </a>
-                        <!-- Twitter / X -->
                         <a href="https://x.com/Yespandidurai" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
-                        <!-- LinkedIn -->
                         <a href="https://www.linkedin.com/in/dr-pandidurai-s-8716551aa/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
-                        <!-- Google Scholar -->
                         <a href="https://scholar.google.com/citations?user=fAdfZRQAAAAJ&hl=en&oi=sra" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z"/></svg>
                         </a>
-                        <!-- ORCID -->
                         <a href="https://orcid.org/0000-0002-0167-1717" aria-label="ORCID" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.369 5.016h-3.875V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.094-3.722h-2.225z"/></svg>
                         </a>
@@ -1365,7 +1376,7 @@
         </section>
 
         <!-- ABOUT SECTION -->
-        <section id="about" style="background-color: var(--bg-surface-light);">
+        <section id="about" class="bg-surface-light-section">
             <h2>About Me</h2>
             <div class="grid-2">
                 <div class="card">
@@ -1373,11 +1384,11 @@
                     <p>I hold a Bachelor of Science in Chemistry from Presidency College (Autonomous), Chennai (2015), and a Master of Science in Chemistry from Bharathidasan University, Tiruchirappalli (2017). I subsequently earned my Ph.D. in Organic Chemistry from the Indian Institute of Technology Madras (IIT Madras), Chennai, in 2024, under the supervision of Professor G. Sekar.</p>
                     <p>I am currently a Postdoctoral Researcher at Aix-Marseille University, France, working under the mentorship of Professor Damien Bonne.</p>
                 </div>
-                <div class="card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;">
-                    <div class="cover-placeholder" style="width: 100%; max-width: 250px; height: 320px;">
+                <div class="card thesis-card">
+                    <div class="cover-placeholder thesis-cover">
                         <img src="assets/images/thesiscover.png" alt="Ph.D. Thesis Cover" onerror="this.style.display='none'">
                     </div>
-                    <div class="pub-actions" style="margin-top: 0; justify-content: center;">
+                    <div class="pub-actions pub-actions-center">
                         <a href="assets/images/thesiscover.svg" target="_blank" rel="noopener noreferrer" class="btn-journal">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                             Graphical Abstract
@@ -1398,7 +1409,7 @@
         <!-- ACADEMIC JOURNEY -->
         <section id="journey">
             <h2>Academic Journey</h2>
-            <div class="timeline" style="margin-top: 2rem;">
+            <div class="timeline mt-2rem">
                 <div class="timeline-item">
                     <div class="timeline-date">March 2025 - Present</div>
                     <h3>Postdoctoral Research Fellow</h3>
@@ -1445,10 +1456,10 @@
                 </div>
                 <div class="card">
                     <h3>Core Objectives</h3>
-                    <ul style="padding-left: 1.5rem; color: var(--text-secondary); margin-top: 1rem;">
-                        <li style="margin-bottom: 0.5rem;">Stereoselective construction of non-biaryl atropisomers.</li>
-                        <li style="margin-bottom: 0.5rem;">Development of green, transition metal-free organocatalytic domino methods.</li>
-                        <li style="margin-bottom: 0.5rem;">Enantioselective synthesis of N- and S-containing heterocycles (pyrrolo-thiazines).</li>
+                    <ul class="vision-list">
+                        <li class="mb-05rem">Stereoselective construction of non-biaryl atropisomers.</li>
+                        <li class="mb-05rem">Development of green, transition metal-free organocatalytic domino methods.</li>
+                        <li class="mb-05rem">Enantioselective synthesis of N- and S-containing heterocycles (pyrrolo-thiazines).</li>
                         <li>Exploiting small-ring strain (cyclopropanes) for challenging cycloadditions.</li>
                     </ul>
                 </div>
@@ -1456,7 +1467,7 @@
         </section>
 
         <!-- RESEARCH THEMES (INTERACTIVE DIAGRAM) -->
-        <section id="themes" style="background-color: var(--bg-surface-light);">
+        <section id="themes" class="bg-surface-light-section">
             <h2>Research Themes</h2>
             <div class="theme-diagram-wrapper">
                 <svg class="diagram-lines">
@@ -1533,7 +1544,7 @@
         <!-- RESEARCH SUMMARIES -->
         <section id="summaries">
             <h2>Research Summaries</h2>
-            <p style="max-width: 800px; margin-bottom: 3rem;">Detailed overview of methodological breakthroughs during my Postdoctoral and Doctoral research.</p>
+            <p class="section-subtitle">Detailed overview of methodological breakthroughs during my Postdoctoral and Doctoral research.</p>
 
             <!-- Postdoctoral Research -->
             <div class="summary-section">
@@ -1554,7 +1565,7 @@
             <!-- Doctoral Research -->
             <div class="summary-section">
                 <h3>Doctoral Research Summary</h3>
-                <p class="summary-text" style="font-style: italic; color: var(--text-secondary); margin-bottom: 2.5rem;">
+                <p class="summary-text summary-subtitle">
                     During my Ph.D., my research mainly focused on "Chiral amine organocatalyzed asymmetric 1,3-dipolar cycloaddition for the construction of novel heterocyclic frameworks bearing multiple stereogenic centers".
                 </p>
 
@@ -1609,57 +1620,57 @@
         </section>
 
         <!-- SKILLS & EXPERTISE -->
-        <section id="skills" style="background-color: var(--bg-surface-light); padding: 4rem 10%; margin: 4rem 0;">
-            <div style="max-width: 1400px; margin: 0 auto;">
+        <section id="skills" class="section-padded-margin">
+            <div class="container-xl">
                 <h2>Experimental Expertise</h2>
-                <div class="grid-2" style="margin-top: 2rem;">
+                <div class="grid-2 mt-2rem">
                     
                     <div>
-                        <div style="margin-bottom: 2rem;">
-                            <h3 style="color: var(--accent-copper); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                        <div class="mb-2rem">
+                            <h3 class="expertise-heading">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>
                                 Synthetic Techniques
                             </h3>
-                            <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); margin-top: 1rem;">
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> Multi-step complex synthesis</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> Asymmetric catalyst design (ligands/organocatalysts)</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> Inert atmosphere techniques (Schlenk/Glovebox)</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> Homogeneous &amp; heterogeneous metal catalysis</li>
+                            <ul class="expertise-list">
+                                <li class="expertise-item"><span>&#10003;</span> Multi-step complex synthesis</li>
+                                <li class="expertise-item"><span>&#10003;</span> Asymmetric catalyst design (ligands/organocatalysts)</li>
+                                <li class="expertise-item"><span>&#10003;</span> Inert atmosphere techniques (Schlenk/Glovebox)</li>
+                                <li class="expertise-item"><span>&#10003;</span> Homogeneous &amp; heterogeneous metal catalysis</li>
                             </ul>
                         </div>
 
-                        <div style="margin-bottom: 2rem;">
-                            <h3 style="color: var(--accent-copper); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                        <div class="mb-2rem">
+                            <h3 class="expertise-heading">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                                 Analytical Methods
                             </h3>
-                            <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); margin-top: 1rem;">
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> Multi-nuclear NMR (1D/2D) - Bruker 400/500 MHz</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> Chiral HPLC (Shimadzu and Waters)/ GC-MS (Shimadzu and Agilent)</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> X-Ray Crystallography</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> Polarimetry &amp; Optical Rotation (Rudolph Autopol IV)</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> HRMS, UV-Vis (Shimadzu and JASCO) and Fluorescence Analysis</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> Flash Column Chromatography</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> IR Spectroscopy (Perkin-Elmer1310IR, JASCO FT-IR 8300)</li>
+                            <ul class="expertise-list">
+                                <li class="expertise-item"><span>&#10003;</span> Multi-nuclear NMR (1D/2D) - Bruker 400/500 MHz</li>
+                                <li class="expertise-item"><span>&#10003;</span> Chiral HPLC (Shimadzu and Waters)/ GC-MS (Shimadzu and Agilent)</li>
+                                <li class="expertise-item"><span>&#10003;</span> X-Ray Crystallography</li>
+                                <li class="expertise-item"><span>&#10003;</span> Polarimetry &amp; Optical Rotation (Rudolph Autopol IV)</li>
+                                <li class="expertise-item"><span>&#10003;</span> HRMS, UV-Vis (Shimadzu and JASCO) and Fluorescence Analysis</li>
+                                <li class="expertise-item"><span>&#10003;</span> Flash Column Chromatography</li>
+                                <li class="expertise-item"><span>&#10003;</span> IR Spectroscopy (Perkin-Elmer1310IR, JASCO FT-IR 8300)</li>
                             </ul>
                         </div>
 
                         <div>
-                            <h3 style="color: var(--accent-copper); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                            <h3 class="expertise-heading">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                                 Computational &amp; Data Analysis
                             </h3>
-                            <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); margin-top: 1rem;">
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> Gaussian, PC model, Gaussview</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> TopSpin, MestReNova (Mnova), EndNote, Mendeley</li>
-                                <li style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>&#10003;</span> OriginLab</li>
+                            <ul class="expertise-list">
+                                <li class="expertise-item"><span>&#10003;</span> Gaussian, PC model, Gaussview</li>
+                                <li class="expertise-item"><span>&#10003;</span> TopSpin, MestReNova (Mnova), EndNote, Mendeley</li>
+                                <li class="expertise-item"><span>&#10003;</span> OriginLab</li>
                             </ul>
                         </div>
                     </div>
                     
-                    <div style="display: flex; align-items: center; justify-content: center;">
-                        <div class="cover-placeholder" style="width: 100%; max-width: 450px; height: 350px;">
-                            <img src="assets/images/pandi_glovebox.svg" alt="Dr. Pandidurai Solai at the Glovebox" style="object-fit: cover;" onerror="this.style.display='none'">
+                    <div class="flex-center">
+                        <div class="cover-placeholder glovebox-img-wrapper">
+                            <img src="assets/images/pandi_glovebox.svg" alt="Dr. Pandidurai Solai at the Glovebox" class="obj-cover" onerror="this.style.display='none'">
                         </div>
                     </div>
                     
@@ -1672,7 +1683,7 @@
             <h2>Publications</h2>
             <p>Highlights from peer-reviewed journals.</p>
             
-            <div style="margin-top: 2rem;">
+            <div class="mt-2rem">
                 <!-- Pub 1 -->
                 <article class="publication">
                     <div class="pub-cover">
@@ -1931,14 +1942,14 @@
         </section>
 
         <!-- PATENTS -->
-        <section id="patents" style="background-color: var(--bg-surface-light); padding: 4rem 10%; margin: 4rem 0;">
-            <div style="max-width: 1400px; margin: 0 auto;">
+        <section id="patents" class="section-padded-margin">
+            <div class="container-xl">
                 <h2>Granted Patents</h2>
                 
-                <div style="margin-top: 2rem;">
+                <div class="mt-2rem">
                     <article class="publication">
                         <div class="pub-content">
-                            <h4 class="pub-title" style="color: var(--accent-copper);">Process for Preparation of Substituted Tetrahydroquinoline-4-one Compounds</h4>
+                            <h4 class="pub-title text-copper">Process for Preparation of Substituted Tetrahydroquinoline-4-one Compounds</h4>
                             <div class="pub-authors">Rajesh, K. B.; <strong>Pandidurai, S.</strong>; Selvam, R.; Arvi, V.; Sekar, G.</div>
                             <div class="pub-journal">Indian Patent Application No.: 202541074805</div>
                             <div class="pub-links">Filed: 2025</div>
@@ -1960,7 +1971,7 @@
 
                     <article class="publication">
                         <div class="pub-content">
-                            <h4 class="pub-title" style="color: var(--accent-copper);">Synthesis of Trisubstituted 1H-Pyrrole-3-Carbaldehyde Compounds</h4>
+                            <h4 class="pub-title text-copper">Synthesis of Trisubstituted 1H-Pyrrole-3-Carbaldehyde Compounds</h4>
                             <div class="pub-authors"><strong>Pandidurai, S.</strong>; Kishore, S.; Sekar, G.</div>
                             <div class="pub-journal">Indian Patent Application No.: 202441067200</div>
                             <div class="pub-links">Grant No.: 562780 (2025)</div>
@@ -1982,7 +1993,7 @@
 
                     <article class="publication">
                         <div class="pub-content">
-                            <h4 class="pub-title" style="color: var(--accent-copper);">Asymmetric Synthesis of Enantioenriched Trisubstituted 4,5-Dihydro-1H-pyrrole-3-carbaldehyde Compounds</h4>
+                            <h4 class="pub-title text-copper">Asymmetric Synthesis of Enantioenriched Trisubstituted 4,5-Dihydro-1H-pyrrole-3-carbaldehyde Compounds</h4>
                             <div class="pub-authors"><strong>Pandidurai, S.</strong>; Sekar, G.</div>
                             <div class="pub-journal">Indian Patent Application No.: 202441067175</div>
                             <div class="pub-links">Grant No.: 564108 (2025)</div>
@@ -2004,7 +2015,7 @@
 
                     <article class="publication">
                         <div class="pub-content">
-                            <h4 class="pub-title" style="color: var(--accent-copper);">Enantio-and Diastereoselective Process for One-step Synthesis of Enantioenriched Pyrrolo[1,2-d][1,4]thiazine-2-carbaldehydes Core Using Chiral Organocatalyst</h4>
+                            <h4 class="pub-title text-copper">Enantio-and Diastereoselective Process for One-step Synthesis of Enantioenriched Pyrrolo[1,2-d][1,4]thiazine-2-carbaldehydes Core Using Chiral Organocatalyst</h4>
                             <div class="pub-authors"><strong>Pandidurai, S.</strong>; Sekar, G.</div>
                             <div class="pub-journal">Indian Patent Application No.: 202241065630</div>
                             <div class="pub-links">Grant No.: 454952 (2023)</div>
@@ -2030,47 +2041,47 @@
         <!-- ACHIEVEMENTS -->
         <section id="achievements">
             <h2>Honors &amp; Achievements</h2>
-            <div class="grid-2" style="margin-top: 2rem;">
+            <div class="grid-2 mt-2rem">
                 
                 <div class="card">
-                    <ul style="list-style: none; color: var(--text-secondary);">
+                    <ul class="achievement-list">
                         
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 15px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <li class="achievement-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" class="icon-shrink"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                             <div>
-                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Seal of Excellence, MSCA Postdoctoral Fellowship 2025</strong><br>
+                                <strong class="achievement-title">Seal of Excellence, MSCA Postdoctoral Fellowship 2025</strong><br>
                                 Awarded by the European Commission for a high-quality proposal (Score: 85.20%) meeting excellence threshold.
                             </div>
                         </li>
                         
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 15px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        <li class="achievement-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" class="icon-shrink"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
                             <div>
-                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Qualified Assistant Professor Lectureship (NET) in Chemical Sciences</strong><br>
+                                <strong class="achievement-title">Qualified Assistant Professor Lectureship (NET) in Chemical Sciences</strong><br>
                                 Council for Scientific and Industrial Research (CSIR) - UGC India, December-2019. Secured All India Rank-49.
                             </div>
                         </li>
                         
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 15px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        <li class="achievement-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" class="icon-shrink"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
                             <div>
-                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Qualified Graduate Aptitude Test in Engineering (GATE)-2019 in Chemical Sciences</strong><br>
+                                <strong class="achievement-title">Qualified Graduate Aptitude Test in Engineering (GATE)-2019 in Chemical Sciences</strong><br>
                                 Secured All India Rank-2834.
                             </div>
                         </li>
 
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 15px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        <li class="achievement-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" class="icon-shrink"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
                             <div>
-                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Qualified Junior Research Fellowship (JRF) in Chemical Sciences</strong><br>
+                                <strong class="achievement-title">Qualified Junior Research Fellowship (JRF) in Chemical Sciences</strong><br>
                                 Council for Scientific and Industrial Research (CSIR) &ndash; UGC, India, June-2018. Secured All India Rank-59.
                             </div>
                         </li>
 
-                        <li style="display: flex; align-items: flex-start; gap: 15px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        <li class="achievement-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" class="icon-shrink"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
                             <div>
-                                <strong style="color: var(--text-primary); font-size: 1.1rem;">Qualified Graduate Aptitude Test in Engineering (GATE)-2018 in Chemical Sciences</strong><br>
+                                <strong class="achievement-title">Qualified Graduate Aptitude Test in Engineering (GATE)-2018 in Chemical Sciences</strong><br>
                                 Secured All India Rank-1317.
                             </div>
                         </li>
@@ -2078,8 +2089,8 @@
                     </ul>
                 </div>
                 
-                <div style="display: flex; align-items: center; justify-content: center;">
-                    <div class="cover-placeholder" style="width: 100%; max-width: 450px; height: auto; min-height: 300px; padding: 10px;">
+                <div class="flex-center">
+                    <div class="cover-placeholder certificate-wrapper">
                         <img src="assets/images/sealofexcellence.png" alt="Seal of Excellence Award Certificate" onerror="this.style.display='none'">
                     </div>
                 </div>
@@ -2088,18 +2099,18 @@
         </section>
 
         <!-- CONFERENCES -->
-        <section id="conferences" style="background-color: var(--bg-surface-light); padding: 4rem 10%; margin: 4rem 0;">
-            <div style="max-width: 1400px; margin: 0 auto;">
+        <section id="conferences" class="section-padded-margin">
+            <div class="container-xl">
                 <h2>Conferences &amp; Presentations</h2>
                 
                 <div class="conference-layout">
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-date">Oct 2025</div>
-                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Oral Presentation</h3>
+                            <h3 class="timeline-title">Oral Presentation</h3>
                             <p><strong>Congress on Organic Chemistry Days (JCO-2025)</strong></p>
                             <p>&Eacute;cole Polytechnique, Palaiseau, France (Oct 29-31, 2025)</p>
-                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                            <div class="pub-actions pub-actions-sm">
                                 <a href="assets/pdfs/JCO-2025-Slide.pdf" target="_blank" rel="noopener noreferrer" class="btn-journal">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                                     Download Slide
@@ -2109,10 +2120,10 @@
 
                         <div class="timeline-item">
                             <div class="timeline-date">Oct 2023</div>
-                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Oral Presentation</h3>
+                            <h3 class="timeline-title">Oral Presentation</h3>
                             <p><strong>Conferences for Young Researches XVIII J-NOST-2023</strong></p>
                             <p>Department of Chemistry<br>Indian Institute of Science Education and Research (IISER)<br> Pune, India (Oct 10-12, 2023)</p>
-                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                            <div class="pub-actions pub-actions-sm">
                                 <a href="assets/pdfs/JNOST-2023-Slide.pdf" target="_blank" rel="noopener noreferrer" class="btn-journal">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                                     Download Slide
@@ -2122,10 +2133,10 @@
 
                         <div class="timeline-item">
                             <div class="timeline-date">Sep 2023</div>
-                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Oral Presentation</h3>
+                            <h3 class="timeline-title">Oral Presentation</h3>
                             <p><strong>Chemistry In-House Symposium-2023 (CiHS-2023)</strong></p>
                             <p>Department of Chemistry<br> Indian Institute of Technology Madras<br> Chennai, India (Sep 23, 2023)</p>
-                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                            <div class="pub-actions pub-actions-sm">
                                 <a href="assets/pdfs/CiHS-2023-Slide.pdf" target="_blank" rel="noopener noreferrer" class="btn-journal">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                                     Download Slide
@@ -2135,10 +2146,10 @@
 
                         <div class="timeline-item">
                             <div class="timeline-date">Dec 2022</div>
-                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Poster Presentation</h3>
+                            <h3 class="timeline-title">Poster Presentation</h3>
                             <p><strong>2nd National Conference on Contemporary Facets in Organic Synthesis (CFOS-2022)</strong></p>
                             <p>Indian Institute of Technology Roorkee<br>Uttarakhand, India (Dec 1-4, 2022)</p>
-                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                            <div class="pub-actions pub-actions-sm">
                                 <a href="assets/pdfs/CFOS-2022-Poster.pdf" target="_blank" rel="noopener noreferrer" class="btn-journal">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                                     Download Poster
@@ -2148,10 +2159,10 @@
 
                         <div class="timeline-item">
                             <div class="timeline-date">Sep 2022</div>
-                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">Poster Presentation</h3>
+                            <h3 class="timeline-title">Poster Presentation</h3>
                             <p><strong>Chemistry In-House Symposium-2022 (CiHS-2022)</strong></p>
                             <p>Department of Chemistry<br> Indian Institute of Technology Madras<br> Chennai, India (Sep 22, 2022)</p>
-                            <div class="pub-actions" style="margin-top: 0.8rem;">
+                            <div class="pub-actions pub-actions-sm">
                                 <a href="assets/pdfs/CiHS-2022-Poster.pdf" target="_blank" rel="noopener noreferrer" class="btn-journal">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                                     Download Poster
@@ -2180,24 +2191,24 @@
         </section>
 
         <!-- CONTACT / FAQ -->
-        <section id="contact" style="background-color: var(--bg-surface-light); padding: 5rem 10%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
-            <div style="max-width: 800px; margin: 0 auto;">
+        <section id="contact" class="section-contact">
+            <div class="contact-container">
                 <h2>Get In Touch</h2>
-                <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-secondary);">
+                <p class="contact-desc">
                     I am always open to discussing research collaborations, sharing scientific insights, and exploring new academic or industrial opportunities.
                 </p>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
-                    <a id="contact-email-1" href="#" class="btn" style="display: flex; align-items: center; gap: 10px;">
+                <div class="contact-links">
+                    <a id="contact-email-1" href="#" class="btn contact-btn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <span id="contact-email-1-text">yespandiduraiiitm[at]gmail[dot]com</span>
+                        <span id="contact-email-1-text">Click to load email</span>
                     </a>
-                    <a id="contact-email-2" href="#" class="btn" style="display: flex; align-items: center; gap: 10px;">
+                    <a id="contact-email-2" href="#" class="btn contact-btn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <span id="contact-email-2-text">solai.pandidurai[at]univ-amu[dot]fr</span>
+                        <span id="contact-email-2-text">Click to load email</span>
                     </a>
                 </div>
-                <div style="margin-top: 3rem; color: var(--text-secondary);">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="margin-bottom: 0.5rem;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <div class="contact-address">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" class="mb-05rem"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     <p>iSm2 Institute of Molecular Sciences of Marseille<br>Aix-Marseille University, Marseille, France</p>
                 </div>
             </div>
@@ -2213,10 +2224,10 @@
         
         <div class="footer-design">
             Web Design: Dr. Hariprasad Narayanan
-            <a id="footer-designer-email" href="#" title="Email Designer" style="color: var(--text-secondary); display: inline-flex; transition: var(--transition);">
+            <a id="footer-designer-email" href="#" title="Email Designer" class="footer-icon">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </a>
-            <a href="https://www.linkedin.com/in/hariprasad-narayanan-04585b320/" title="Designer's LinkedIn" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); display: inline-flex; transition: var(--transition);">
+            <a href="https://www.linkedin.com/in/hariprasad-narayanan-04585b320/" title="Designer's LinkedIn" target="_blank" rel="noopener noreferrer" class="footer-icon">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
         </div>
@@ -2231,35 +2242,28 @@
     <!-- JAVASCRIPT -->
     <script>
         (function () {
-            // Simple decode helper — reverses a basic split encoding
-            function decode(parts) {
-                return parts.join('');
-            }
+            // Base64 cryptographic encoding to thwart automated email scrapers
+            var b64_1 = "eWVzcGFuZGlkdXJhaWlpdG1AZ21haWwuY29t";
+            var b64_2 = "c29sYWkucGFuZGlkdXJhaUB1bml2LWFtdS5mcg==";
+            var b64_3 = "aGFyaXByYXNhZG1hbmR1ckBnbWFpbC5jb20=";
 
-            // yespandiduraiiitm@gmail.com
-            var e1 = decode(['yespandiduraiiitm', '@', 'gmail', '.', 'com']);
-            // solai.pandidurai@univ-amu.fr
-            var e2 = decode(['solai.pandidurai', '@', 'univ-amu', '.', 'fr']);
-            // hariprasadmandur@gmail.com
-            var e3 = decode(['hariprasadmandur', '@', 'gmail', '.', 'com']);
+            var e1 = atob(b64_1);
+            var e2 = atob(b64_2);
+            var e3 = atob(b64_3);
 
-            // Hero email icon
             var heroEmail = document.getElementById('hero-email-link');
             if (heroEmail) { heroEmail.href = 'mailto:' + e1; }
 
-            // Contact section — email 1
             var ce1 = document.getElementById('contact-email-1');
             var ce1t = document.getElementById('contact-email-1-text');
             if (ce1) { ce1.href = 'mailto:' + e1; }
             if (ce1t) { ce1t.textContent = e1; }
 
-            // Contact section — email 2
             var ce2 = document.getElementById('contact-email-2');
             var ce2t = document.getElementById('contact-email-2-text');
             if (ce2) { ce2.href = 'mailto:' + e2; }
             if (ce2t) { ce2t.textContent = e2; }
 
-            // Footer designer email
             var fde = document.getElementById('footer-designer-email');
             if (fde) { fde.href = 'mailto:' + e3; }
         })();
