@@ -134,7 +134,8 @@
             --font-sans: 'Inter', sans-serif;
             
             /* Spacing & Layout - Fluid for all screens */
-            --section-padding: clamp(3rem, 6vh, 5rem) clamp(5%, 8vw, 10%);
+            /* INCREASED Top padding (7rem) so that the fixed header never covers section titles */
+            --section-padding: clamp(7rem, 12vh, 9rem) clamp(5%, 8vw, 10%) clamp(4rem, 8vh, 6rem);
             --border-radius: 8px;
             --transition: all 0.3s ease;
         }
@@ -202,7 +203,7 @@
         .vision-list { padding-left: 1.5rem; color: var(--text-secondary); margin-top: 1rem; }
         .section-subtitle { max-width: 800px; margin-bottom: 3rem; }
         .summary-subtitle { font-style: italic; color: var(--text-secondary); margin-bottom: 2.5rem; }
-        .section-padded-margin { background-color: var(--bg-surface-light); padding: 4rem 10%; margin: 4rem 0; }
+        .section-padded-margin { background-color: var(--bg-surface-light); padding: var(--section-padding); margin: 0; }
         .container-xl { max-width: 1400px; margin: 0 auto; }
         .expertise-heading { color: var(--accent-copper); font-size: 1.2rem; display: flex; align-items: center; gap: 8px; }
         .expertise-list { list-style: none; padding-left: 0; color: var(--text-secondary); margin-top: 1rem; }
@@ -218,7 +219,7 @@
         .certificate-wrapper { width: 100%; max-width: 450px; height: auto; min-height: 300px; padding: 10px; }
         .timeline-title { font-size: 1.2rem; color: var(--text-primary); }
         .pub-actions-sm { margin-top: 0.8rem; }
-        .section-contact { background-color: var(--bg-surface-light); padding: 5rem 10%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+        .section-contact { background-color: var(--bg-surface-light); padding: var(--section-padding); text-align: center; border-top: 1px solid rgba(255,255,255,0.05); margin: 0; }
         .contact-container { max-width: 800px; margin: 0 auto; }
         .contact-desc { margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-secondary); }
         .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
@@ -610,8 +611,9 @@
         .theme-diagram-wrapper {
             position: relative;
             width: 100%;
-            max-width: 800px;
-            height: clamp(500px, 70vh, 700px);
+            max-width: 750px;
+            aspect-ratio: 1 / 1; /* FIXED SYMMETRY: Forces perfectly symmetrical circle on all screens */
+            height: auto;
             margin: 0 auto;
         }
         
@@ -1228,6 +1230,7 @@
             /* Flatten Interactive Diagram to elegant grid */
             .theme-diagram-wrapper {
                 height: auto;
+                aspect-ratio: auto; /* Reset aspect ratio for grid layout */
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
                 gap: 1.5rem;
@@ -1322,12 +1325,12 @@
         <!-- HERO SECTION -->
         <section class="hero" id="home">
             <div class="hero-molecules-banner">
-                <img src="assets/images/mol11.svg" alt="Synthesized Molecule 1" onerror="this.style.display='none'">
-                <img src="assets/images/mol12.svg" alt="Synthesized Molecule 2" onerror="this.style.display='none'">
-                <img src="assets/images/mol13.svg" alt="Synthesized Molecule 3" onerror="this.style.display='none'">
-                <img src="assets/images/mol14.svg" alt="Synthesized Molecule 4" onerror="this.style.display='none'">
-                <img src="assets/images/mol15.svg" alt="Synthesized Molecule 5" onerror="this.style.display='none'">
-                <img src="assets/images/mol16.svg" alt="Synthesized Molecule 6" onerror="this.style.display='none'">
+                <img src="assets/images/mol11.svg" alt="Synthesized Molecule 1">
+                <img src="assets/images/mol12.svg" alt="Synthesized Molecule 2">
+                <img src="assets/images/mol13.svg" alt="Synthesized Molecule 3">
+                <img src="assets/images/mol14.svg" alt="Synthesized Molecule 4">
+                <img src="assets/images/mol15.svg" alt="Synthesized Molecule 5">
+                <img src="assets/images/mol16.svg" alt="Synthesized Molecule 6">
             </div>
             <div class="hero-container">
                 <div class="hero-content">
@@ -1351,7 +1354,7 @@
                 <div class="hero-image">
                     <div class="hexagon-border">
                         <div class="image-placeholder">
-                            <img src="assets/images/pandi.jpeg" alt="Dr. Pandidurai Solai" onerror="this.style.display='none'">
+                            <img src="assets/images/pandi.jpeg" alt="Dr. Pandidurai Solai">
                         </div>
                     </div>
                     <div class="hero-socials">
@@ -1386,7 +1389,7 @@
                 </div>
                 <div class="card thesis-card">
                     <div class="cover-placeholder thesis-cover">
-                        <img src="assets/images/thesiscover.png" alt="Ph.D. Thesis Cover" onerror="this.style.display='none'">
+                        <img src="assets/images/thesiscover.png" alt="Ph.D. Thesis Cover">
                     </div>
                     <div class="pub-actions pub-actions-center">
                         <a href="assets/images/thesiscover.svg" target="_blank" rel="noopener noreferrer" class="btn-journal">
@@ -1554,7 +1557,7 @@
                         Currently working at iSm2 (Institute of Molecular Sciences of Marseille, Aix-Marseille University, France) on the synthesis of heteroatom-linked non-biaryl atropisomers via enantioselective desymmetrization strategy using chiral phosphoric acid catalyst.
                     </p>
                     <div class="summary-image-placeholder">
-                       <img src="assets/images/ejc2026.svg" alt="Postdoctoral Research Scheme" onerror="this.style.display='none'">
+                       <img src="assets/images/ejc2026.svg" alt="Postdoctoral Research Scheme">
                     </div>
                     <div class="figure-caption">
                         <a href="#publications">ChemistryEurope, 2025, Accepted.</a>
@@ -1574,7 +1577,7 @@
                         I successfully developed a methodology for the synthesis of enantioenriched pyrrolo-thiazines-2-carbaldehydes and derivatives, starting from commercially available &alpha;,&beta;-unsaturated aldehydes, and easily accessible benzothiazolium salts. The reaction, catalyzed by chiral amino organocatalysts, proceeded via 1,3-dipolar cycloaddition/rearrangement, delivering products in good yields with excellent stereocontrol (up to &gt;99% ee, and &gt;20:1 d.r.).
                     </p>
                     <div class="summary-image-placeholder">
-                        <img src="assets/images/ol2024.svg" alt="Org. Lett. Reaction Scheme" onerror="this.style.display='none'">
+                        <img src="assets/images/ol2024.svg" alt="Org. Lett. Reaction Scheme">
                     </div>
                     <div class="figure-caption">
                         <a href="https://doi.org/10.1021/acs.orglett.4c00713" target="_blank" rel="noopener noreferrer">Org. Lett. 2024, 26, 2971-2975</a>
@@ -1586,7 +1589,7 @@
                         This methodology was further extended to develop an efficient enantioselective one-pot method for the synthesis of N-phenyl thioether-tethered tetrasubstituted 4,5-dihydropyrrole-3-carbaldehydes. The sequence combined 1,3-dipolar cycloaddition/rearrangement/C-S bond formation/ring-opening (C-S bond cleavage), starting from benzothiazolium salts and &alpha;,&beta;-unsaturated aldehydes. Using (R)-diphenylprolinol trimethyl silyl ether as the catalyst, the reaction proceeded in good yields with excellent stereocontrol (&gt;96% ee and up to &gt;20:1 d.r.).
                     </p>
                     <div class="summary-image-placeholder">
-                        <img src="assets/images/obc2024.svg" alt="Org. Biomol. Chem. Reaction Scheme" onerror="this.style.display='none'">
+                        <img src="assets/images/obc2024.svg" alt="Org. Biomol. Chem. Reaction Scheme">
                     </div>
                     <div class="figure-caption">
                         <a href="https://doi.org/10.1039/D4OB01123A" target="_blank" rel="noopener noreferrer">Org. Biomol. Chem. 2024, 22, 8119-8124</a>
@@ -1598,7 +1601,7 @@
                         I developed a catalytic domino approach for the synthesis of trisubstituted 1H-pyrroles via 1,3-dipolar cycloaddition/ring-opening/C-S and C-N bond cleavage reaction sequence, starting from readily available &alpha;,&beta;-unsaturated aldehydes and 4-metylthiazolium salts. The transformation, catalyzed by racemic diphenylprolinol trimethyl silyl ether at room temperature, afforded the desired products efficiently. This methodology was further extended to a catalytic asymmetric domino approach for the enantioselective synthesis of trisubstituted 4,5-dihydro-1H-pyrroles. The sequence involved 1,3-dipolar cycloaddition/ring-opening/C-S and C-N bond cleavage using (R)-diphenylprolinol trimethyl silyl ether as the chiral catalyst at 0 &deg;C, affording the products in good yields and with excellent stereocontrol.
                     </p>
                     <div class="summary-image-placeholder">
-                        <img src="assets/images/chemcom2025.svg" alt="Chem. Commun. Reaction Scheme 1" onerror="this.style.display='none'">
+                        <img src="assets/images/chemcom2025.svg" alt="Chem. Commun. Reaction Scheme 1">
                     </div>
                     <div class="figure-caption">
                         <a href="https://doi.org/10.1039/D4CC05688J" target="_blank" rel="noopener noreferrer">Chem. Commun., 2025, 61, 5806-5809</a>
@@ -1610,7 +1613,7 @@
                         Apart from my doctoral research on enantioselective organocatalysis, I have also worked on homogeneous and heterogeneous transition metal (Pd, Pt, Cu), as well as metal nanoparticles (Pd, Pt, Cu) mediated reactions. This provided me with in-depth expertise in both organometallic chemistry and transition metal chemistry. In particular, I demonstrated the one-pot synthesis of 3-arylidene-2-oxindoles via a Heck-like carbocyclization/nucleophilic addition sequence, starting from N-(2-iodophenyl)-N-methyl-3-phenylpropiolamide, phenylacetylene, and a secondary amine, using binaphthyl-stabilized palladium nanoparticles (Pd-BNP) as a reusable catalyst.
                     </p>
                     <div class="summary-image-placeholder">
-                        <img src="assets/images/joc2023.svg" alt="J. Org. Chem. Reaction Scheme" onerror="this.style.display='none'">
+                        <img src="assets/images/joc2023.svg" alt="J. Org. Chem. Reaction Scheme">
                     </div>
                     <div class="figure-caption">
                         <a href="https://doi.org/10.1021/acs.joc.2c02693" target="_blank" rel="noopener noreferrer">J. Org. Chem. 2023, 88, 1730-1741</a>
@@ -1670,7 +1673,7 @@
                     
                     <div class="flex-center">
                         <div class="cover-placeholder glovebox-img-wrapper">
-                            <img src="assets/images/pandi_glovebox.svg" alt="Dr. Pandidurai Solai at the Glovebox" class="obj-cover" onerror="this.style.display='none'">
+                            <img src="assets/images/pandi_glovebox.svg" alt="Dr. Pandidurai Solai at the Glovebox" class="obj-cover">
                         </div>
                     </div>
                     
@@ -1688,7 +1691,7 @@
                 <article class="publication">
                     <div class="pub-cover">
                         <div class="cover-placeholder">
-                          <img src="assets/images/chemeucover.png" alt="Journal Cover" onerror="this.style.display='none'">
+                          <img src="assets/images/chemeucover.png" alt="Journal Cover">
                         </div>
                     </div>
                     <div class="pub-content">
@@ -1714,7 +1717,7 @@
                             </a>
                         </div>
                         <div class="toc-placeholder">
-                             <img src="assets/images/ejc2026.svg" alt="Graphical Abstract" onerror="this.style.display='none'">
+                             <img src="assets/images/ejc2026.svg" alt="Graphical Abstract">
                         </div>
                     </div>
                 </article>
@@ -1723,7 +1726,7 @@
                 <article class="publication">
                     <div class="pub-cover">
                         <div class="cover-placeholder">
-                            <img src="assets/images/chemcomcover.png" alt="Journal Cover" onerror="this.style.display='none'">
+                            <img src="assets/images/chemcomcover.png" alt="Journal Cover">
                         </div>
                     </div>
                     <div class="pub-content">
@@ -1752,7 +1755,7 @@
                             </a>
                         </div>
                         <div class="toc-placeholder">
-                            <img src="assets/images/chemcom2025.svg" alt="Graphical Abstract" onerror="this.style.display='none'">
+                            <img src="assets/images/chemcom2025.svg" alt="Graphical Abstract">
                         </div>
                     </div>
                 </article>
@@ -1761,7 +1764,7 @@
                 <article class="publication">
                     <div class="pub-cover">
                         <div class="cover-placeholder">
-                            <img src="assets/images/olcover.jpg" alt="Journal Cover" onerror="this.style.display='none'">
+                            <img src="assets/images/olcover.jpg" alt="Journal Cover">
                         </div>
                     </div>
                     <div class="pub-content">
@@ -1790,7 +1793,7 @@
                             </a>
                         </div>
                         <div class="toc-placeholder">
-                            <img src="assets/images/ol2024.svg" alt="Graphical Abstract" onerror="this.style.display='none'">
+                            <img src="assets/images/ol2024.svg" alt="Graphical Abstract">
                         </div>
                     </div>
                 </article>
@@ -1799,7 +1802,7 @@
                 <article class="publication">
                     <div class="pub-cover">
                         <div class="cover-placeholder">
-                            <img src="assets/images/obccover.jpg" alt="Journal Cover" onerror="this.style.display='none'">
+                            <img src="assets/images/obccover.jpg" alt="Journal Cover">
                         </div>
                     </div>
                     <div class="pub-content">
@@ -1828,7 +1831,7 @@
                             </a>
                         </div>
                         <div class="toc-placeholder">
-                             <img src="assets/images/obc2024.svg" alt="Graphical Abstract" onerror="this.style.display='none'">
+                             <img src="assets/images/obc2024.svg" alt="Graphical Abstract">
                         </div>
                     </div>
                 </article>
@@ -1837,7 +1840,7 @@
                 <article class="publication">
                     <div class="pub-cover">
                         <div class="cover-placeholder">
-                            <img src="assets/images/joc2023cover.jpg" alt="Journal Cover" onerror="this.style.display='none'">
+                            <img src="assets/images/joc2023cover.jpg" alt="Journal Cover">
                         </div>
                     </div>
                     <div class="pub-content">
@@ -1866,7 +1869,7 @@
                             </a>
                         </div>
                         <div class="toc-placeholder">
-                             <img src="assets/images/joc2023.svg" alt="Graphical Abstract" onerror="this.style.display='none'">
+                             <img src="assets/images/joc2023.svg" alt="Graphical Abstract">
                         </div>
                     </div>
                 </article>
@@ -1875,7 +1878,7 @@
                 <article class="publication">
                     <div class="pub-cover">
                         <div class="cover-placeholder">
-                            <img src="assets/images/eurjoc_cover.jpg" alt="Journal Cover" onerror="this.style.display='none'">
+                            <img src="assets/images/eurjoc_cover.jpg" alt="Journal Cover">
                         </div>
                     </div>
                     <div class="pub-content">
@@ -1896,7 +1899,7 @@
                             </a>
                         </div>
                         <div class="toc-placeholder">
-                            <img src="assets/images/eurjoc_toc.png" alt="Graphical Abstract" onerror="this.style.display='none'">
+                            <img src="assets/images/eurjoc_toc.png" alt="Graphical Abstract">
                         </div>
                     </div>
                 </article>
@@ -1905,7 +1908,7 @@
                 <article class="publication">
                     <div class="pub-cover">
                         <div class="cover-placeholder">
-                            <img src="assets/images/chemrxiv-logo.svg" alt="Journal Cover" onerror="this.style.display='none'">
+                            <img src="assets/images/chemrxiv-logo.svg" alt="Journal Cover">
                         </div>
                     </div>
                     <div class="pub-content">
@@ -1934,7 +1937,7 @@
                             </a>
                         </div>
                         <div class="toc-placeholder">
-                            <img src="assets/images/archivetoc.gif" alt="Graphical Abstract" onerror="this.style.display='none'"> 
+                            <img src="assets/images/archivetoc.gif" alt="Graphical Abstract"> 
                         </div>
                     </div>
                 </article>
@@ -1964,7 +1967,7 @@
                                 </a>
                             </div>
                             <div class="toc-placeholder">
-                              <img src="assets/images/patent2025.svg" alt="Patent Graphic" onerror="this.style.display='none'">
+                              <img src="assets/images/patent2025.svg" alt="Patent Graphic">
                             </div>
                         </div>
                     </article>
@@ -1986,7 +1989,7 @@
                                 </a>
                             </div>
                             <div class="toc-placeholder">
-                                <img src="assets/images/patent_2025.svg" alt="Patent Graphic" onerror="this.style.display='none'">
+                                <img src="assets/images/patent_2025.svg" alt="Patent Graphic">
                             </div>
                         </div>
                     </article>
@@ -2008,7 +2011,7 @@
                                 </a>
                             </div>
                             <div class="toc-placeholder">
-                                <img src="assets/images/patent_2025a.svg" alt="Patent Graphic" onerror="this.style.display='none'">
+                                <img src="assets/images/patent_2025a.svg" alt="Patent Graphic">
                             </div>
                         </div>
                     </article>
@@ -2030,7 +2033,7 @@
                                 </a>
                             </div>
                             <div class="toc-placeholder">
-                                <img src="assets/images/patent2023.svg" alt="Patent Graphic" onerror="this.style.display='none'">
+                                <img src="assets/images/patent2023.svg" alt="Patent Graphic">
                             </div>
                         </div>
                     </article>
@@ -2091,7 +2094,7 @@
                 
                 <div class="flex-center">
                     <div class="cover-placeholder certificate-wrapper">
-                        <img src="assets/images/sealofexcellence.png" alt="Seal of Excellence Award Certificate" onerror="this.style.display='none'">
+                        <img src="assets/images/sealofexcellence.png" alt="Seal of Excellence Award Certificate">
                     </div>
                 </div>
 
@@ -2173,15 +2176,15 @@
                     
                     <div class="conference-photos">
                         <div class="conf-photo-container">
-                            <img src="assets/images/IMG_0527.png" alt="Group Photo CFOS-2022" onerror="this.style.display='none'">
+                            <img src="assets/images/IMG_0527.png" alt="Group Photo CFOS-2022">
                             <div class="conf-photo-caption">Research Group Photo &ndash; Summer 2025 &#11088;</div>
                         </div>
                         <div class="conf-photo-container">
-                            <img src="assets/images/jco2025.jpeg" alt="Group Photo JCO-2025" onerror="this.style.display='none'">
+                            <img src="assets/images/jco2025.jpeg" alt="Group Photo JCO-2025">
                             <div class="conf-photo-caption">Congress on Organic Chemistry Days (JCO-2025)</div>
                         </div>
                         <div class="conf-photo-container">
-                            <img src="assets/images/roorkee.jpeg" alt="Group Photo CFOS-2022" onerror="this.style.display='none'">
+                            <img src="assets/images/roorkee.jpeg" alt="Group Photo CFOS-2022">
                             <div class="conf-photo-caption">National Conference on Contemporary Facets in Organic Synthesis (CFOS-2022)</div>
                         </div>
                     </div>
@@ -2240,7 +2243,8 @@
     </div>
 
     <!-- JAVASCRIPT -->
-    <script>
+    <!-- [SECURITY] Nonce enforced. Unsafe-inline stripped. -->
+    <script nonce="pandidurai-portfolio-secure-2026">
         (function () {
             // Base64 cryptographic encoding to thwart automated email scrapers
             var b64_1 = "eWVzcGFuZGlkdXJhaWlpdG1AZ21haWwuY29t";
@@ -2270,6 +2274,14 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             
+            // [SECURITY] Removed vulnerable `onerror="this.classList.add('d-none')"` 
+            // inline HTML handlers. Secured them here with central DOM logic.
+            document.querySelectorAll('img').forEach(function(img) {
+                img.addEventListener('error', function() {
+                    this.classList.add('d-none');
+                });
+            });
+
             // --- Mobile Menu Drawer Logic ---
             var hamburger = document.getElementById('hamburger');
             var navLinksContainer = document.querySelector('.nav-links');
