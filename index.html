@@ -418,9 +418,9 @@
         }
 
         .hero-molecules-banner img {
-            height: clamp(60px, 12vh, 180px);
-            width: auto;
-            max-width: clamp(35px, 12%, 180px); /* Fluid size */
+            width: clamp(50px, 15.5%, 300px); /* Maximized size: 6 items taking ~93% of the row */
+            height: auto;
+            max-height: clamp(80px, 20vh, 250px); /* Safeguard against vertical overflow */
             object-fit: contain;
             filter: invert(1) brightness(1.2);
             mix-blend-mode: screen;
